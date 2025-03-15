@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить Крано-манипуляторную установку" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "kmu.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = false
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-vipo.html", name: "Каталог VIPO"}, {href: "#", name: "Краны-манипуляторы"},]
+  - const isButton = true
+
+block main
+
+  main
+    +page-banner("Краны-манипуляторы", "banners", "kmu", "jpg", 1360, 590, "Манипулятор", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +kmu-list()

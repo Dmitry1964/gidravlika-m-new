@@ -1,0 +1,9 @@
+mixin page-banner(title, path, image, format, width, height, altText, isChetra)
+  section.page-banner
+    .container
+      .page-banner__wrapper
+        if isChetra
+          h2.page-banner__title.title-chetra=title
+        else
+          h2.page-banner__title=title
+        +picture(path, image, format, width, height, altText)

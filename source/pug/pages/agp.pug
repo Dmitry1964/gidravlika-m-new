@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить Автогидроподъемник ВИПО" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "agp.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = false
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-vipo.html", name: "Каталог VIPO"}, {href: "#", name: "Автовышки"},]
+  - const isButton = true
+
+block main
+
+  main
+    +page-banner("Автовышки", "banners", "agp", "jpg", 1360, 590, "Автовышка", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +agp-list()

@@ -1,0 +1,14 @@
+mixin breadcrumbs(breadcrumbs, isButton)
+  .breadcrumbs
+    .container
+      .breadcrumbs__wrapper
+        ul.breadcrumbs__links(itemscope itemtype="https://schema.org/BreadcrumbList")
+          each item in breadcrumbs
+            if item.href !== "#"
+              li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+                a(itemprop="item" href = item.href).breadcrumbs__link=item.name
+            else
+              li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+                a(itemprop="item" href = item.href).breadcrumbs__link.active=item.name
+        if isButton
+          button.breadcrumbs__btn

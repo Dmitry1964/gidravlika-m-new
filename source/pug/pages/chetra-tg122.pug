@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить Трубоукладчик Четра ТГ-122" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "chetra-tg122.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = true
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-chetra.html", name: "Каталог Четра"}, {href: "pipes.html", name: "Трубоукладчики"}, {href: "#", name: "Четра ТГ122"}]
+  - const isButton = false
+
+block main
+
+  main
+    +page-banner("Трубоукладчик Четра ТГ122", "pipes-tg122", "tg122", "jpg", 1360, 590, "Трубоукладчик Четра", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +info-chetra-tg122()

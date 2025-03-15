@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить Экскаватор Четра Е520" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "excavator-chetra-e520.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = true
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-chetra.html", name: "Каталог Четра"}, {href: "excavator.html", name: "Экскаваторы"}, {href: "#", name: "Четра Е520"}]
+  - const isButton = false
+
+block main
+
+  main
+    +page-banner("Экскаватор Четра Е520", "excavator-e520", "excavator-e520", "jpg", 1360, 590, "Экскаватор Четра Е520", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +info-excavator-e520()

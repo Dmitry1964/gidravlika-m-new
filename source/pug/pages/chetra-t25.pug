@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить Бульдозер ЧЕТРА T25" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "chetra-t25.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = true
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-chetra.html", name: "Каталог Четра"}, {href: "bulldozers.html", name: "Бульдозеры"}, {href: "#", name: "Четра Т25"}]
+  - const isButton = false
+
+block main
+
+  main
+    +page-banner("Бульдозер Четра Т25", "bulldozer-t25", "chetra-t25", "jpg", 1360, 590, "Бульдозер Четра Т25", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +info-chetra-t25()

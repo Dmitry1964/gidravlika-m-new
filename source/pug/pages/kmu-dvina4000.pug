@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить КМУ Двина 4000" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "kmu-dvina4000.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = false
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-vipo.html", name: "Каталог VIPO"}, {href: "kmu.html", name: "Манипуляторы"}, {href: "#", name: "КМУ Двина 4000"}]
+  - const isButton = false
+
+block main
+
+  main
+    +page-banner("КМУ Двина-4000", "kmu-dvina4000", "kmu-dvina4000", "jpg", 1360, 590, "КМУ Двина 4000", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +info-dvina4000()

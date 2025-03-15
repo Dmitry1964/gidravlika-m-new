@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить Бурильно-крановые машины" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "kmu-tractor.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = false
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-vipo.html", name: "Каталог VIPO"}, {href: "#", name: "Краны-манипуляторы"},]
+  - const isButton = true
+
+block main
+
+  main
+    +page-banner("КМУ на базе трактора", "banners", "kmu-tractor", "jpg", 1360, 590, "Манипулятор на базе трактора", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +kmu-tractor-list()

@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить БКМ 3350" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "bkm-vipo3350.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = false
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-vipo.html", name: "Каталог VIPO"}, {href: "bkm.html", name: "Бурильные машины"}, {href: "#", name: "БКМ 3.350"}]
+  - const isButton = false
+
+block main
+
+  main
+    +page-banner("БКМ-3.350", "bkm3350", "bkm3350", "jpg", 1360, 590, "Бурильная машина БКМ 3,350", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +info-bkm3350()

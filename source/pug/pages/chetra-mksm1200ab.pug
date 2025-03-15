@@ -1,0 +1,20 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Купить Минипогрузчик Четра МКСМ-1200A" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "chetra-mksm1200ab.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const isChetra = true
+  - const breadCrumbs = [{href: "index.html", name: "Главная"}, {href: "catalog-chetra.html", name: "Каталог Четра"}, {href: "mini-loaders.html", name: "Минипогрузчики"}, {href: "#", name: "МКСМ-1200A"}]
+  - const isButton = false
+
+block main
+
+  main
+    +page-banner("Минипогрузчики Четра", "mksm1200ab", "mksm1200ab", "jpg", 1360, 590, "Минипогрузчик Четра МКСМ-1200A", isChetra)
+    +breadcrumbs(breadCrumbs, isButton)
+    +info-chetra-mksm1200ab()
