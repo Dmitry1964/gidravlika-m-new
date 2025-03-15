@@ -1,0 +1,27 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Главная"
+      },
+      {
+        href: "#",
+        text: "Страница 2"
+      },
+      {
+        href: "catalog.html",
+        text: "Страница 3"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      .header__content
+        .header__content-logo
+          +imgsvg("svg", "logo", "svg", 50, 50, "Логотип ТД Гидравлика М")
+          p продажа и сервис спецтехники<br>волгоград
+        .header__content-phone
+          //- +imgsvg("svg", "title", "svg", 175, 45, "Гидравлика М")
+          //- +imgsvg("svg", "icon-phone", "svg", 30, 30, "Иконка телефон")
+          //- +btn({text: "+7 (8442) 263-103", href: "tel:+78442263102"}).header__link
