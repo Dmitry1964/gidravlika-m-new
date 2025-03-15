@@ -1,0 +1,94 @@
+mixin info-chetra-t35()
+  -
+    const images = [
+      {
+        path: "bulldozer-t35",
+        image: "t35-isometry-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер Т15 ",
+      },
+      {
+        path: "bulldozer-t35",
+        image: "t35-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер t35",
+      },
+      {
+        path: "bulldozer-t35",
+        image: "t35-right",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер t35",
+      },
+      {
+        path: "bulldozer-t35",
+        image: "t35-left",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер t35",
+      },
+      {
+        path: "bulldozer-t35",
+        image: "t35-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер t35",
+      },
+      {
+        path: "bulldozer-t35",
+        image: "t35-isometry-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер t35",
+      },
+    ]
+
+  -const frontOptions = ['полусферический отвал  / 4670 x 2465 / 18,5', 'прямой отвал / 3680 x 2210 / 14,2', 'сферический отвал / 5064 x 2096 / 20,3']
+  -const backOptions = ['рыхлитель 1 зуб', 'рыхлитель 3 зуба', 'лебедка']
+  -const options = ['Двойной стеклопакет кабины', 'Система спутникового мониторинга ГЛОНАСС/GPS','Зависимый и независимый отопитель кабины','Система предпускового подогрева двигателя','Температурное исполнение -50С +35С','Аудиосистема','Автоматический звуковой сигнал заднего хода','Звуковой сигнал переднего хода','Боковые зеркала заднего вида','Сиденье с микроподрессовыванием и пневмоподвеской']
+
+  section.chetra-unit
+    .container
+      h2.visually-hidden Бульдозер Четра Т9
+      .chetra-unit__content
+        .chetra-unit__slider.swiper
+          .chetra-init__list.swiper-wrapper
+            for item in images
+              .chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+
+        .chetra-unit__info
+          h3.chetra-unit__info-title Основные характеристики
+          dl.chetra-unit__info-list
+            dt Модель двигателя:
+            dd ЯМЗ-850.10 / Cummins QSK-19
+            dt Мощность номинальная, кВт (л.с.):
+            dd 412 (560) / 394 (536)
+            dt Мощность эксплуатационная, кВт (л.с.):
+            dd 382 (520) / 360 (490)
+            dt Эксплуатационная масса, т:
+            dd от 52,9 до 62,3
+
+          h3.chetra-unit__options-title Переднее навесное оборудование / размеры (ШхВ) / Объем отвала (м3)
+          ul.chetra-unit__front-options
+            for item in frontOptions
+              li=item
+          h3.chetra-unit__options-title Заднее навесное оборудование
+          ul.chetra-unit__back-options
+            for item in backOptions
+              li=item
+          h3.chetra-unit__options-title Стандартная комплектация
+          ul.chetra-unit__options
+            for item in options
+              li=item

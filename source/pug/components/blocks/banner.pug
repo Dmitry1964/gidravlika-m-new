@@ -1,0 +1,39 @@
+mixin banner()
+  section.banner
+    h2.visually-hidden Баннер Четра и Випо
+    .container
+      .banner__wrapper
+        .banner__chetra
+          .banner__chetra-logo
+            +imgsvg("svg", "logo-chetra", "svg", 360, 70, "Логотип Четра")
+          .swiper.banner__chetra-swiper
+            .swiper-wrapper.banner__chetra-swiper-wrapper
+              .banner__chetra-item.swiper-slide
+                +picture("banners", "banner-chetra-1", "png", 440, 263, "Изображение бульдозера" )
+              .banner__chetra-item.swiper-slide
+                +picture("banners", "banner-chetra-2", "jpg", 440, 263, "Изображение мирипогрузчика" )
+              .banner__chetra-item.swiper-slide
+                +picture("banners", "banner-chetra-3", "png", 440, 263, "Изображение бульдозера" )
+              .banner__chetra-item.swiper-slide
+                +picture("banners", "banner-chetra-4", "jpg", 440, 263, "Изображение бульдозера" )
+              .banner__chetra-item.swiper-slide
+                +picture("banners", "banner-chetra-5", "png", 440, 263, "Изображение экскаватора" )
+
+
+        .banner__vipo
+          .swiper.banner__vipo-swiper
+            .swiper-wrapper.banner__vipo-wrapper
+              .banner__vipo-item.swiper-slide
+                +picture("banners", "banner-vipo-1", "png", 480, 250, "Изображение автовышки" )
+              .banner__vipo-item.swiper-slide
+                +picture("banners", "banner-vipo-2", "png", 480, 250, "Изображение кму" )
+              .banner__vipo-item.swiper-slide
+                +picture("banners", "banner-vipo-3", "png", 480, 250, "Изображение буровой установки" )
+              .banner__vipo-item.swiper-slide
+                +picture("banners", "banner-vipo-4", "png", 480, 250, "Изображение кму на базе трактора" )
+              .banner__vipo-item.swiper-slide
+                +picture("banners", "banner-vipo-5", "png", 480, 250, "Изображение автокрана" )
+              .banner__vipo-item.swiper-slide
+                +picture("banners", "banner-vipo-6", "png", 480, 250, "Изображение мусоровоза" )
+          .banner__vipo-logo
+            +imgsvg("svg", "logo-vipo", "svg", 250, 120, "Логотип Четра")

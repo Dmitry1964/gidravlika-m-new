@@ -1,0 +1,113 @@
+mixin info-excavator-e210()
+  -
+    const images = [
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-1",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-2",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-3",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-4",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-5",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-6",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-7",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+      {
+        path: "excavator-e210",
+        image: "excavator-e210-8",
+        format: "jpg",
+        width: 690,
+        height: 460,
+        altText: "Изображение экскаватора Четра Е210 ",
+      },
+    ]
+
+  section.excavator-unit
+    .container
+      .excavator-unit__content
+        .excavator-unit__images.chetra-unit__slider.swiper
+          .excavator-init__list.chetra-init__list.swiper-wrapper
+            for item in images
+              .excavator-unit__item.chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+        .excavator-unit__info
+          h2 Основные характеристики
+          dl.excavator-unit__info-list
+            dt Модель двигателя
+            dd Weichai WP6G175E301 / Cummins QSB6.7
+            dt Мощность, кВт(л.с)
+            dd 129 (175 ) / 124 (169 )
+            dt Объем ковша, м³
+            dd 1.1
+            dt Масса, т
+            dd 21,8
+            dt Длина рукояти, мм
+            dd 2 920
+            dt Длина стрелы, мм
+            dd 5 675
+            dt Глубина копания - max (размер-J), мм
+            dd 6 644
+            dt Высота выгрузки - max (размер-U), мм
+            dd 6 717
+            dt Длина (размер-А), мм
+            dd 9 765
+            dt Ширина (размер-B), мм
+            dd 2 980
+            dt Высота по кабине (размер-H), мм
+            dd 3 020
+            dt Топливный бак, л
+            dd 400
+            dt Гидравлический бак, л
+            dd 256
+            dt Кондиционер
+            dd.excavator-unit__info-bolean
+        .excavator-unit__dimensions
+          +picture( "excavator-e210", "excavator-e210-dim", "jpg", 690, 245, "Габаритные размеры")

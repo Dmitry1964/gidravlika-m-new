@@ -1,0 +1,113 @@
+mixin buldozers-list()
+  -
+    const buldozers = [
+      {
+        path: "buldozers",
+        image: "buld-t9",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т9",
+        power: "121 (165) / 121 (165)",
+        massa: "от 16 до 21.8",
+        title: "Бульдозер ЧЕТРА Т9",
+        href: "chetra-t9.html",
+        altText: "Изображение бульдозера",
+      },
+      {
+        path: "buldozers",
+        image: "buld-t11",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т11",
+        power: "155 (210) / 152 (207)",
+        massa: "от 19 до 23.4",
+        title: "Бульдозер ЧЕТРА Т11",
+        href: "chetra-t11.html",
+        altText: "Изображение бульдозера",
+      },
+      {
+        path: "buldozers",
+        image: "buld-t15",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т15",
+        power: "184 (250) / 193 (263)",
+        massa: "от 24,7 до 29,9",
+        title: "Бульдозер ЧЕТРА Т15",
+        href: "chetra-t15.html",
+        altText: "Изображение бульдозера",
+      },
+      {
+        path: "buldozers",
+        image: "buld-t20",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т20",
+        power: "243 (330) / 246 (335)",
+        massa: "от 30,7 до 35,2",
+        title: "Бульдозер ЧЕТРА Т20",
+        href: "chetra-t20.html",
+        altText: "Изображение бульдозера",
+      },
+      {
+        path: "buldozers",
+        image: "buld-t25",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т25",
+        power: "324 (441) / 328 (446)",
+        massa: "от 41,2 до 50,9",
+        title: "Бульдозер ЧЕТРА Т25",
+        href: "chetra-t25.html",
+        altText: "Изображение бульдозера",
+      },
+      {
+        path: "buldozers",
+        image: "buld-t35",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т35",
+        power: "412 (560) / 394 (536)",
+        massa: "от 52,9 до 62,3",
+        title: "Бульдозер ЧЕТРА Т35",
+        href: "chetra-t35.html",
+        altText: "Изображение бульдозера",
+      },
+      {
+        path: "buldozers",
+        image: "buld-t40",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т40",
+        power: "485 (660)",
+        massa: "от 67,8 до 70,3",
+        title: "Бульдозер ЧЕТРА Т40",
+        href: "chetra-t40.html",
+        altText: "Изображение бульдозера",
+      },
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Бульдозеры
+        +aside-menu-chetra()
+        ul.catalog__list
+          each item in buldozers
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                h2.catalog__item-title=item.title
+              .catalog__item-params
+                h3 Мощность номинальная
+                h3 ЯМЗ/Cummins, кВт (л.с.):
+                p.catalog__item-value=item.power
+                h3 Эксплутационная масса, т:
+                p.catalog__item-value=item.massa
+              +btn({text: "Подробнее", href: item.href}).btn--chetra

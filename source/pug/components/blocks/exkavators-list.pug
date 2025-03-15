@@ -1,0 +1,103 @@
+mixin exkavators-list()
+  -
+    const exkavators = [
+      {
+        path: "exkavator",
+        image: "E210",
+        format: "jpg",
+        width: 218,
+        height: 200,
+        altText: "Экскаватор Е210",
+        power: "129 кВт / 175 л.с.",
+        massa: "21.8 т",
+        bucket: "1,1 м³",
+        title: "Гусенечный экскаватор ЧЕТРА Е210",
+        href: "excavator-chetra-e210.html"
+      },
+      {
+        path: "exkavator",
+        image: "E210-NC",
+        format: "jpg",
+        width: 218,
+        height: 200,
+        altText: "Экскаватор Е210-NC",
+        power: "112 кВт / 152 л.с.",
+        massa: "21.8 т",
+        bucket: "1,1 м³",
+        title: "Гусенечный экскаватор ЧЕТРА Е210-NC",
+        href: "excavator-chetra-e210nc.html"
+      },
+      {
+        path: "exkavator",
+        image: "E270",
+        format: "jpg",
+        width: 218,
+        height: 200,
+        altText: "Экскаватор Е270",
+        power: "145 кВт / 197 л.с.",
+        massa: "25.8 т",
+        bucket: "1.3 м³",
+        title: "Гусенечный экскаватор ЧЕТРА Е270",
+        href: "excavator-chetra-e270.html"
+      },
+      {
+        path: "exkavator",
+        image: "E330",
+        format: "jpg",
+        width: 218,
+        height: 200,
+        altText: "Экскаватор Е330",
+        power: "212 кВт / 288 л.с.",
+        massa: "32.8 т",
+        bucket: "1.8 м³",
+        title: "Гусенечный экскаватор ЧЕТРА Е330",
+        href: "excavator-chetra-e330.html"
+      },
+      {
+        path: "exkavator",
+        image: "E400",
+        format: "jpg",
+        width: 218,
+        height: 200,
+        altText: "Экскаватор Е400",
+        power: "212 кВт / 288 л.с.",
+        massa: "39.3 т",
+        bucket: "1.9 м³",
+        title: "Гусенечный экскаватор ЧЕТРА Е400",
+        href: "excavator-chetra-e400.html"
+      },
+      {
+        path: "exkavator",
+        image: "E520",
+        format: "jpg",
+        width: 218,
+        height: 200,
+        altText: "Экскаватор Е520",
+        power: "300 кВт / 408 л.с.",
+        massa: "50.5 / 51 т",
+        bucket: "2.6 / 3.2 м³",
+        title: "Гусенечный экскаватор ЧЕТРА Е520",
+        href: "excavator-chetra-e520.html"
+      },
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Бульдозеры
+        +aside-menu-chetra()
+        ul.catalog__list
+          each item in exkavators
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                h2.catalog__item-title.catalog__item-title--backhoe=item.title
+              .catalog__item-params
+                dl
+                  dt Масса
+                  dd=item.massa
+                  dt Объем ковша, м³
+                  dd=item.bucket
+                  dt Мощность двигателя:
+                  dd=item.power
+
+              +btn({text: "Подробнее", href: item.href}).btn--chetra

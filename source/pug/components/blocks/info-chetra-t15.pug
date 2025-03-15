@@ -1,0 +1,93 @@
+mixin info-chetra-t15()
+  -
+    const images = [
+      {
+        path: "bulldozer-t15",
+        image: "t15-isometry-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер Т15 ",
+      },
+      {
+        path: "bulldozer-t15",
+        image: "t15-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер T15 ",
+      },
+      {
+        path: "bulldozer-t15",
+        image: "t15-right",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер T15 ",
+      },
+      {
+        path: "bulldozer-t15",
+        image: "t15-left",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер T15 ",
+      },
+      {
+        path: "bulldozer-t15",
+        image: "t15-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер T15 ",
+      },
+      {
+        path: "bulldozer-t15",
+        image: "t15-isometry-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер T15 ",
+      },
+    ]
+
+  -const frontOptions = ['полусферический отвал  / 3794 x 1544 / 6,8', 'полусферический отвал (мелиоративный) / 4100 x 1542 / 9,2', 'прямой отвал / 3880 x 1530 / 5,8', 'сферический отвал / 4058 x 1555 / 8,5']
+  -const backOptions = ['рыхлитель 1 зуб', 'рыхлитель 3 зуба', 'лебедка']
+  -const options = ['Двойной стеклопакет кабины', 'Система спутникового мониторинга ГЛОНАСС/GPS','Зависимый и независимый отопитель кабины','Система предпускового подогрева двигателя','Температурное исполнение -50С +35С','Аудиосистема','Автоматический звуковой сигнал заднего хода','Звуковой сигнал переднего хода','Боковые зеркала заднего вида','Сиденье с микроподрессовыванием и пневмоподвеской']
+
+  section.chetra-unit
+    .container
+      h2.visually-hidden Бульдозер Четра Т9
+      .chetra-unit__content
+        .chetra-unit__slider.swiper
+          .chetra-init__list.swiper-wrapper
+            for item in images
+              .chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+
+        .chetra-unit__info
+          h3.chetra-unit__info-title Основные характеристики
+          dl.chetra-unit__info-list
+            dt Модель двигателя:
+            dd  ЯМЗ-238 НД7-1 / Cummins QSC8.3
+            dt Мощность номинальная, кВт (л.с.):
+            dd 184 (250) / 193 (263)
+            dt Мощность эксплуатационная, кВт (л.с.):
+            dd 180 (245) / 174 (235)
+            dt Эксплуатационная масса, т:
+            dd от 24,7 до 29,9
+          h3.chetra-unit__options-title Переднее навесное оборудование / размеры (ШхВ) / Объем отвала (м3)
+          ul.chetra-unit__front-options
+            for item in frontOptions
+              li=item
+          h3.chetra-unit__options-title Заднее навесное оборудование
+          ul.chetra-unit__back-options
+            for item in backOptions
+              li=item
+          h3.chetra-unit__options-title Стандартная комплектация
+          ul.chetra-unit__options
+            for item in options
+              li=item

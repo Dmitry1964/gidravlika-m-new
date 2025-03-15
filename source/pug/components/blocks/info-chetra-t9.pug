@@ -1,0 +1,85 @@
+mixin info-chetra-t9()
+  -
+    const images = [
+      {
+        path: "bulldozer-t9",
+        image: "t9-isometry",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер Т9 изометрия ",
+      },
+      {
+        path: "bulldozer-t9",
+        image: "t9-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер Т9 изометрия ",
+      },
+      {
+        path: "bulldozer-t9",
+        image: "t9-right",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер Т9 изометрия ",
+      },
+      {
+        path: "bulldozer-t9",
+        image: "t9-left",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер Т9 изометрия ",
+      },
+      {
+        path: "bulldozer-t9",
+        image: "t9-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение Бульдозер Т9 изометрия ",
+      },
+    ]
+
+  -const frontOptions = ['полусферический отвал  / 3154 x 1273 / 4,28', 'прямой отвал / 4185 x 1002 / 3,26', 'оворотный механический отвал / 3977 x 1110 / 3,7']
+  -const backOptions = ['рыхлитель 1 зуб', 'рыхлитель 3 зуба', 'лебедка']
+  -const options = ['Двойной стеклопакет кабины', 'Система спутникового мониторинга ГЛОНАСС/GPS','Зависимый и независимый отопитель кабины','Система предпускового подогрева двигателя','Температурное исполнение -50С +35С','Аудиосистема','Автоматический звуковой сигнал заднего хода','Звуковой сигнал переднего хода','Боковые зеркала заднего вида','Сиденье с микроподрессовыванием и пневмоподвеской']
+
+  section.chetra-unit
+    .container
+      h2.visually-hidden Бульдозер Четра Т9
+      .chetra-unit__content
+        .chetra-unit__slider.swiper
+          .chetra-init__list.swiper-wrapper
+            for item in images
+              .chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+
+        .chetra-unit__info
+          h3.chetra-unit__info-title Основные характеристики
+          dl.chetra-unit__info-list
+            dt Модель двигателя:
+            dd ЯМЗ-236 НБ-2 / Cummins QSB6.7
+            dt Мощность номинальная, кВт (л.с.):
+            dd 121 (165) / 121 (165)
+            dt Мощность эксплуатационная, кВт (л.с.):
+            dd 110 (150) / 110 (150)
+            dt Эксплуатационная масса, т:
+            dd от 16 до 21,8
+          h3.chetra-unit__options-title Переднее навесное оборудование / размеры (ШхВ) / Объем отвала (м3)
+          ul.chetra-unit__front-options
+            for item in frontOptions
+              li=item
+          h3.chetra-unit__options-title Заднее навесное оборудование
+          ul.chetra-unit__back-options
+            for item in backOptions
+              li=item
+          h3.chetra-unit__options-title Стандартная комплектация
+          ul.chetra-unit__options
+            for item in options
+              li=item

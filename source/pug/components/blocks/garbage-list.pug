@@ -1,0 +1,110 @@
+mixin garbage-list()
+  -
+    const garbages = [
+      {
+        path: "garbage",
+        image: "garbage-BKM9",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Мусоровоз",
+        title: "ВКМ-9 МАЗ-4371",
+        base: "ГАЗ-С41",
+        brutto: "10 100",
+        netto: "2 350",
+        container: "от 0,12 до 1,1 м3",
+        dimensions: "6,83 х 2,5 х 2,9",
+        href: "#",
+        altText: "Излбражение муслровоза",
+      },
+      {
+        path: "garbage",
+        image: "garbage-BKM10K",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Мусоровоз",
+        title: "ВКМ-10 КАМАЗ-43253",
+        base: "КАМАЗ-43253",
+        brutto: "15 500",
+        netto: "6 075",
+        container: "от 0,12 до 1,1 м3",
+        dimensions: "7,5 х 2,5 х 3,1",
+        href: "#",
+        altText: "Излбражение муслровоза",
+      },
+      {
+        path: "garbage",
+        image: "garbage-BKM10",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Мусоровоз",
+        title: "ВКМ-10 МАЗ-4371",
+        base: "МАЗ-4371",
+        brutto: "12 500",
+        netto: "3 700",
+        container: "от 0,12 до 1,1 м3",
+        dimensions: "6,83 х 2,5 х 3,15",
+        href: "#",
+        altText: "Излбражение муслровоза",
+      },
+      {
+        path: "garbage",
+        image: "garbage-BKM19",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Мусоровоз",
+        title: "ВКМ-19 МАЗ-5340",
+        base: "МАЗ-5340",
+        brutto: "20 500",
+        netto: "7 300",
+        container: "от 0,12 до 1,1 м3",
+        dimensions: "8,6 х 2,5 х 3,85",
+        href: "#",
+        altText: "Излбражение муслровоза",
+      },
+      {
+        path: "garbage",
+        image: "garbage-BKM24",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Мусоровоз",
+        title: "ВКМ-24 МАЗ-6312",
+        base: "МАЗ-6312",
+        brutto: "25 000",
+        netto: "13 200",
+        container: "от 0,12 до 1,1 м3",
+        dimensions: "9,84 х 2,55 х 3,62",
+        href: "#",
+        altText: "Излбражение муслровоза",
+      },
+
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Автовышки
+        +aside-menu-vipo()
+        ul.catalog__list.catalog__list--vipo
+          each item in garbages
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                span=item.name
+                h2.catalog__item-title=item.title
+              .catalog__item-params
+                dl
+                  dt Модель шасси
+                  dd=item.base
+                  dt Мах разрешенная масса, кг
+                  dd=item.brutto
+                  dt Масса отходов, кг
+                  dd=item.netto
+                  dt Тип мусорных контейнеров
+                  dd=item.container
+                  dt Габариты(ДхШхВ)
+                  dd=item.dimensions
+              +btn({text: "Подробнее", href: item.href})

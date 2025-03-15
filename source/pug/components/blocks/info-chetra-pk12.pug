@@ -1,0 +1,94 @@
+mixin info-chetra-pk12()
+  -
+    const images = [
+      {
+        path: "loader-pk12",
+        image: "loader-pk12-1",
+        format: "jpg",
+        width: 680,
+        height: 487,
+        altText: "Изображение Погрузчика ПК 12 ",
+      },
+      {
+        path: "loader-pk12",
+        image: "loader-pk12-2",
+        format: "jpg",
+        width: 680,
+        height: 487,
+        altText: "Изображение Погрузчика ПК 12 ",
+      },
+      {
+        path: "loader-pk12",
+        image: "loader-pk12-3",
+        format: "jpg",
+        width: 680,
+        height: 487,
+        altText: "Изображение Погрузчика ПК 12 ",
+      },
+      {
+        path: "loader-pk12",
+        image: "loader-pk12-4",
+        format: "jpg",
+        width: 680,
+        height: 487,
+        altText: "Изображение Погрузчика ПК 12 ",
+      },
+      {
+        path: "loader-pk12",
+        image: "loader-pk12-5",
+        format: "jpg",
+        width: 680,
+        height: 487,
+        altText: "Изображение Погрузчика ПК 12 ",
+      },
+      {
+        path: "loader-pk12",
+        image: "loader-pk12-6",
+        format: "jpg",
+        width: 680,
+        height: 487,
+        altText: "Изображение Погрузчика ПК 12 ",
+      },
+
+    ]
+
+  -const frontOptions = ['Ковш универсальный', 'Ковш скальный', 'Ковш угольный']
+  -const addOptions = ['Система автоматического пожаротушения', 'Система автоматической смазки', 'Система видеообзора', 'Искрогаситель', 'Защитные решетки кабины', 'Светодиодные фары', 'Радиостанция', 'Система быстрой заправки топливом']
+  -const options = ['Двойной стеклопакет кабины', 'Система спутникового мониторинга ГЛОНАСС/GPS','Зависимый и независимый отопитель кабины','Система предпускового подогрева двигателя','Температурное исполнение -50С +35С','Аудиосистема','Автоматический звуковой сигнал заднего хода','Звуковой сигнал переднего хода','Боковые зеркала заднего вида','Сиденье с микроподрессовыванием и пневмоподвеской']
+
+  section.chetra-unit
+    .container
+      h2.visually-hidden Бульдозер Четра Т9
+      .chetra-unit__content
+        .chetra-unit__slider.swiper
+          .chetra-init__list.swiper-wrapper
+            for item in images
+              .chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+
+        .chetra-unit__info
+          h3.chetra-unit__info-title Основные характеристики
+          dl.chetra-unit__info-list
+            dt Модель двигателя:
+            dd ЯМЗ-850.10-01 / Cummins KTA19
+            dt Мощность, кВт (л.с.):
+            dd 136 (185) / 138 (187)
+            dt Масса, т:
+            dd 51.6
+            dt Грузоподъемность, т
+            dd 12
+          h3.chetra-unit__options-title Навесное оборудование
+          ul.chetra-unit__front-options
+            for item in frontOptions
+              li=item
+          h3.chetra-unit__options-title Опционально устанавливаемое оборудование
+          ul.chetra-unit__back-options
+            for item in addOptions
+              li=item
+          h3.chetra-unit__options-title Стандартная комплектация
+          ul.chetra-unit__options
+            for item in options
+              li=item

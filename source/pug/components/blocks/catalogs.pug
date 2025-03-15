@@ -1,0 +1,22 @@
+mixin catalogs()
+  - const chetra = ["Бульдозеры", "Трубоукладчики","Минипогрузчики","Погрузчики","Экскаваторы"]
+  - const vipo = ["Автовышки", "Краны-манипуляторы","Автокраны","Бурильные установки","Мусоровозы"]
+  - const urlChetra = "catalog-chetra.html"
+  - const urlVipo = "catalog-vipo.html"
+
+  section.catalogs
+    .container
+      h1.catalogs__title Продажа и сервис спецтехники  от завода производителя
+    .catalogs__items
+      .catalogs__left
+        a(href=urlChetra)
+          h2.catalogs__left-title Каталог техники ЧЕТРА
+          ul.catalogs__left-list.catalogs__list
+            each item in chetra
+              li.catalogs__left-item=item
+      .catalogs__right
+        a(href=urlVipo)
+          h2.catalogs__right-title Каталог техники VIPO
+          ul.catalogs__right-list.catalogs__list
+            each item in vipo
+              li.catalogs__right-item=item

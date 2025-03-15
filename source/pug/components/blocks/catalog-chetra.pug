@@ -1,0 +1,77 @@
+mixin catalog-chetra()
+  -
+    const catalogItems = [
+      {
+        title: "бульдозеры",
+        path: "chetra",
+        image: "buldozer",
+        format: "jpg",
+        width: 200,
+        height: 114,
+        alt: "Бульдозеры Четра",
+        href: "bulldozers.html"
+      },
+
+      {
+        title: "трубоукладчики",
+        path: "chetra",
+        image: "pipes",
+        format: "jpg",
+        width: 200,
+        height: 213,
+        alt: "Трубоукладчики Четра",
+        href: "pipes.html"
+
+      },
+
+      {
+        title: "минипогрузчики",
+        path: "chetra",
+        image: "loader-mini",
+        format: "jpg",
+        width: 200,
+        height: 124,
+        alt: "Минипогрузчики Четра",
+        href: "mini-loaders.html"
+      },
+
+      {
+        title: "погрузчики",
+        path: "chetra",
+        image: "frontal",
+        format: "jpg",
+        width: 200,
+        height: 114,
+        alt: "Погрузчики Четра",
+        href: "loaders.html"
+      },
+
+      {
+        title: "экскаваторы",
+        path: "chetra",
+        image: "exkavator",
+        format: "jpg",
+        width: 200,
+        height: 180,
+        alt: "Экскаваторы Четра",
+        href: "excavator.html"
+      }
+    ]
+
+  section.catalog-chetra
+    .catalog-chetra__title
+      .container
+        h2 каталог Четра
+    .catalog-chetra-content
+      .container
+        .catalog-chetra__wrapper.swiper
+          .catalog-chetra__list.swiper-wrapper
+            each item in catalogItems
+              .catalog-chetra__item.swiper-slide
+                a(href=item.href)
+                  .catalog-chetra__item-image
+                    +picture(item.path, item.image, item.format, item.width, item.height, item.alt)
+                  h2.catalog-chetra__item-title=item.title
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination

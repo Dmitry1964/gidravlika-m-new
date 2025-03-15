@@ -1,0 +1,42 @@
+mixin crane-list()
+  -
+    const cranes = [
+      {
+        path: "crane-kc25",
+        image: "kc-25",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Автокран",
+        title: "VISIT KC-25",
+        base: "КАМАЗ-43118",
+        boom: "31",
+        radius: "3.4",
+        dimensions: "5,4",
+        href: "crane-visit-kc25.html",
+        altText: "Изображение автокрана",
+      },
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Автовышки
+        +aside-menu-vipo()
+        ul.catalog__list.catalog__list--vipo.catalog__list--start
+          each item in cranes
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                span=item.name
+                h2.catalog__item-title=item.title
+              .catalog__item-params
+                dl
+                  dt Модель шасси
+                  dd=item.base
+                  dt Длина стрелы, м
+                  dd=item.boom
+                  dt Минималиный вылет, м
+                  dd=item.radius
+                  dt База выносных опор, м
+                  dd=item.dimensions
+              +btn({text: "Подробнее", href: item.href})

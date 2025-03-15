@@ -1,0 +1,70 @@
+mixin offer()
+  section.offer
+    .container
+      h2.offer__title Примите участие в программе субсидирования лизинга
+      .offer__content
+        .offer__info
+          .offer__info-list
+            .offer__info-item
+              .offer__info-title
+                +imgsvg('svg', 'logo-chetra-small', 'svg', 62, 16, 'логотип Четра')
+                h3 Субсидирование лизинга
+              .offer__info-description
+                h3 Субсидирование лизинга специализированной техники и оборудования в 2024г
+                p Постановление Правительства РФ от 3 июня 2020 г. №&nbsp;811 “Об утверждении Правил предоставления субсидии из федерального бюджета на возмещение потерь в доходах российских лизинговых организаций при предоставлении лизингополучателю скидки по уплате авансового платежа по договорам лизинга специализированной техники и (или) оборудования”
+            .offer__info-item
+              .offer__info-title
+                +imgsvg('svg', 'logo-chetra-small', 'svg', 62, 16, 'логотип Четра')
+                h3 Выгода потребителя
+              .offer__info-description
+                h3 Субсидия может составлять (п.4 Постановления)
+                p До 15% от цены техники на условии “франко-завод” (с учетом НДС), указанной в договоре купли-продажи (поставки), в случае, если техника по договору лизинга передается на территории:
+                ul.offer__info-list
+                  li ДФО
+                  li СФО
+                  li НАО и ЯНАО
+                  li Карелии, Коми, Архангельской, Калининградской, Мурманской областей
+                  li Республики Крым, Севастополя
+                p До 10% от цены техники на условии “франко-завод” (с учетом НДС) для остальных субъектов
+            .offer__info-item
+              .offer__info-title
+                +imgsvg('svg', 'logo-chetra-small', 'svg', 62, 16, 'логотип Четра')
+                h3 Условия получения субсидии
+              .offer__info-description
+                h3 Субсидии предоставляются при соблюдении следующих основных условий
+                ul.offer__info-list
+                  li Техника произведена не ранее чем за 3 года до года заключения договора лизинга, ранее не передавалась в лизинг, не была в собственности физического лица и не находилась на регистрационном учете
+                  li На технику выдано заключение по ПП РФ № 719
+                  li Договор лизинга заключен не ранее 1 ноября 2023г, передача техники лизингополучателю осуществлена не ранее 1 января 2024г
+            //- .offer__info-item
+            //-   .offer__info-title
+            //-     +imgsvg('svg', 'logo-chetra-small', 'svg', 62, 16, 'логотип Четра')
+            //-     h4.offer__title-video Жизнь за пределами ключевой ставки
+            //-   .offer__info-video
+            //-     <video controls width="260">
+            //-       <source src="video/video-w.webm" type="video/webm">
+            //-     </video>
+
+        .offer__buttons
+          .offer__button
+            .offer__button-img
+              +imgsvg('svg','subsidy', 'svg', 50, 50, 'иконка субсидии')
+            h3.offer__button-title Субсидирование лизинга техники
+          .offer__button
+            .offer__button-img
+              +imgsvg('svg','discount', 'svg', 50, 50, 'иконка субсидии')
+            h3.offer__button-title Скидка до 15% на технику ЧЕТРА
+          .offer__button
+            .offer__button-img
+              +imgsvg('svg','conditions', 'svg', 50, 50, 'иконка субсидии')
+            h3.offer__button-title Условия получения субсидии
+          //- .offer__button
+          //-   .offer__button-img
+          //-     +imgsvg('svg','video', 'svg', 50, 50, 'иконка видео')
+          //-   h3.offer__button-title Видео
+
+        .offer__slider-buttons
+          button.offer__slider-btn.offer__slider-btn--prev(data-button='button-prev')
+            +imgsvg('svg', 'slide-prev', 'svg', 15, 15, 'стрелка назад')
+          button.offer__slider-btn.offer__slider-btn--next(data-button='button-next')
+            +imgsvg('svg', 'slide-next', 'svg', 15, 15, 'стрелка назад')

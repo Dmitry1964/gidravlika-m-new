@@ -1,0 +1,74 @@
+mixin info-agp15()
+  -
+    const images = [
+      {
+        path: "agp-vipo15",
+        image: "agp-vipo15-1",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-15",
+        base: "ГАЗ-А21",
+        radius: "11",
+        dimensions: "6,125х2,2х2,755"
+      },
+      {
+        path: "agp-vipo15",
+        image: "agp-vipo15-2",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-15",
+        base: "УАЗ-236031",
+        radius: "9",
+        dimensions: "7,05х2,35х2,725",
+      },
+      {
+        path: "agp-vipo15",
+        image: "agp-vipo15-3",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-15",
+        base: "ГАЗ-А22",
+        radius: "11",
+        dimensions: "6,950х2,2х2,8",
+      },
+    ]
+  section.vipo-unit
+    .container
+      h2.visually-hidden Автовышка Випо-12 Мини
+      .vipo-unit__content
+        .vipo-unit__slider.swiper
+          .vipo-init__list.swiper-wrapper
+            for item in images
+              .vipo-unit__item.swiper-slide(data-base=item.base, data-dimensions=item.dimensions, data-radius=item.radius)
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          if (images.length > 1)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .vipo-unit__images
+          +picture("agp-vipo15", "agp-vipo15-graf", "jpg", 540, 590, "Диаграмма грузоподъемности")
+        .vipo-unit__options
+          dl.vipo-unit__options-list
+            dt Модель шасси
+            dd.vipo-unit__options-base ГАЗ-А21
+            dt Грузоподъемность люльки, кг
+            dd 250
+            dt Рабочая высота подъема, м
+            dd 15
+            dt Вылет, м
+            dd.vipo-unit__options-radius 11
+            dt Угол поворота стрелы
+            dd 360°
+            dt Габариты (ДхВхШ)
+            dd.vipo-unit__options-dimensions 6,2х2,2х2,755
+        .vipo-unit__features
+          ul.vipo-unit__features-list
+            li.vipo-unit__features-item Телескопическая стрела (основная стрела + 2 секции)
+            li.vipo-unit__features-item Цепная синхронизация выдвижения секций
+            li.vipo-unit__features-item Электрогидравлическое управление с пульта и с люльки
+            li.vipo-unit__features-item Размеры люльки  1400×780×1100 (мм)
+            li.vipo-unit__features-item Электроизоляция люльки до 1000 В
+            li.vipo-unit__features-item Гидравлические шланги и проводка проложены внутри стрелы

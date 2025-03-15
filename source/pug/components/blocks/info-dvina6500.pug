@@ -1,0 +1,59 @@
+mixin info-dvina6500()
+  -
+    const images = [
+      {
+        path: "kmu-dvina6500",
+        image: "kmu-dvina6500-1",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение КМУ Двина 6500",
+        base: "КАМАЗ-65115",
+        liftingMin: "300",
+        liftingMax: "6 500",
+        radiusMin: "1",
+        radiusMax: "18.7",
+        topMax: "20.8",
+        bottomMax: "20.9",
+      },
+    ]
+  section.kmu-unit
+    .container
+      h2.visually-hidden Автовышка Випо-18
+      .kmu-unit__content
+        .kmu-unit__slider.swiper
+          .kmu-init__list.swiper-wrapper
+            for item in images
+              .kmu-unit__item.swiper-slide(data-base=item.base, data-dimensions=item.dimensions, data-liftingmin=item.liftingMin, data-liftingmax=item.liftingMax, data-radiusmin=item.radiusMin, data-radiusmax=item.radiusMax, data-topmax=item.topMax, data-bottommax=item.bottomMax)
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          if (images.length > 1)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .kmu-unit__images
+          +picture("kmu-dvina6500", "kmu-dvina6500-graf", "jpg", 648, 590, "Диаграмма грузоподъемности")
+        .kmu-unit__options
+          dl.kmu-unit__options-list
+            dt Модель шасси
+            dd.kmu-unit__options-base КАМАЗ-65115
+            dt Грузоподъемность max, кг
+            dd.kmu-unit__options-lifting--max 6 500
+            dt Грузоподъемность min, кг
+            dd.kmu-unit__options-lifting--min 300
+            dt Вылет max, м
+            dd.kmu-unit__options-radius--max 18.7
+            dt Вылет min, м
+            dd.kmu-unit__options-radius--min 1
+            dt Рабочая высота max,м
+            dd.kmu-unit__options-top 20.8
+            dt Глубина опускания max, м
+            dd.kmu-unit__options-bottom 20.9
+        .kmu-unit__features
+          ul.kmu-unit__features-list
+            li.kmu-unit__features-item Телескопическая стрела (основная стрела + 4 секции)
+            li.kmu-unit__features-item Цепная синхронизация выдвижения секций
+            li.kmu-unit__features-item Гидравлическое управление с портала
+            li.kmu-unit__features-item Дополнительно может комплектоваться люлькой и буром
+            li.kmu-unit__features-item Троссовая лебедка с крюком
+            li.kmu-unit__features-item Гидравлические шланги и проводка проложены внутри стрелы
+            li.kmu-unit__features-item Вращение стрелы на 360° без ограничений

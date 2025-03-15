@@ -1,0 +1,47 @@
+mixin info-bkm3350()
+  -
+    const images = [
+      {
+        path: "bkm3350",
+        image: "bkm3350-1",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение бурильной машина БКМ3350",
+      },
+    ]
+  section.bkm-unit
+    .container
+      h2.visually-hidden Бурильно-крановая машина БКМ 6600
+      .bkm-unit__content
+        .bkm-unit__slider
+          .bkm-init__list
+            for item in images
+              .bkm-unit__item
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+        .bkm-unit__options
+          dl.bkm-unit__options-list
+            dt Модель шасси
+            dd.bkm-unit__options-base  ГАЗ-С41А23
+            dt Глубина бурения max, м
+            dd.bkm-unit__options-bottom 3.2
+            dt Диаметр бурения, м
+            dd.bkm-unit__options-diametr до 0,80
+            dt Тип инструмента
+            dd.bkm-unit__options-tool Шнек/бур
+            dt Угол бурения
+            dd.bkm-unit__options-angle 45°-135°
+            dt Грузоподъемность, кг
+            dd.bkm-unit__options-lifting 1 500
+            dt Высота подъема крюка, м
+            dd.bkm-unit__options-height 7.29
+            dt Габариты (ДхШхВ)
+            dd 6,89 × 2,34 × 2,57
+        .bkm-unit__features
+          ul.bkm-unit__features-list
+            li.bkm-unit__features-item Бурильно-крановая установка коленчатого типа
+            li.bkm-unit__features-item Возможность бурить прямые и наклонные скважины
+            li.bkm-unit__features-item На мачте конструкции размещаются движущие детали привода
+            li.bkm-unit__features-item Установка свай и опор под здания и сооружения
+            li.bkm-unit__features-item Электрогидравлический способ управления
+            li.bkm-unit__features-item Бурение скважин в грунтах до IV категории по СНИП IV-2-82, включая вечномёрзлые при отсутствии валунов, плывунов и линз

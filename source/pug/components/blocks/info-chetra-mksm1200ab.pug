@@ -1,0 +1,180 @@
+mixin info-chetra-mksm1200ab()
+  -
+    const images = [
+      {
+        path: "mksm1200ab",
+        image: "mksm1200ab-1",
+        format: "jpg",
+        width: 690,
+        height: 384,
+        altText: "Изображение минипогрузчик мксм1200 ",
+      },
+      {
+        path: "mksm1200ab",
+        image: "mksm1200ab-2",
+        format: "jpg",
+        width: 690,
+        height: 384,
+        altText: "Изображение минипогрузчик мксм1200 ",
+      },
+      {
+        path: "mksm1200ab",
+        image: "mksm1200ab-3",
+        format: "jpg",
+        width: 690,
+        height: 384,
+        altText: "Изображение минипогрузчик мксм1200 ",
+      },
+      {
+        path: "mksm1200ab",
+        image: "mksm1200ab-4",
+        format: "jpg",
+        width: 690,
+        height: 384,
+        altText: "Изображение минипогрузчик мксм1200 ",
+      },
+      {
+        path: "mksm1200ab",
+        image: "mksm1200ab-5",
+        format: "jpg",
+        width: 690,
+        height: 384,
+        altText: "Изображение минипогрузчик мксм1200 ",
+      },
+      {
+        path: "mksm1200ab",
+        image: "mksm1200ab-6",
+        format: "jpg",
+        width: 690,
+        height: 384,
+        altText: "Изображение минипогрузчик мксм1200 ",
+      },
+      {
+        path: "mksm1200ab",
+        image: "mksm1200ab-7",
+        format: "jpg",
+        width: 690,
+        height: 384,
+        altText: "Изображение минипогрузчик мксм1200 ",
+      },
+
+    ]
+
+  -
+    const interiors = [
+      {
+        path: "interiors",
+        image: "interior-1",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+      {
+        path: "interiors",
+        image: "interior-2",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+      {
+        path: "interiors",
+        image: "interior-3",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+      {
+        path: "interiors",
+        image: "interior-4",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+      {
+        path: "interiors",
+        image: "interior-5",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+      {
+        path: "interiors",
+        image: "interior-6",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+      {
+        path: "interiors",
+        image: "interior-7",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+      {
+        path: "interiors",
+        image: "interior-8",
+        format: "jpg",
+        width: 600,
+        height: 400,
+        altText: "Изображение интерьер кабины мксм800 ",
+      },
+    ]
+  section.mksm-unit
+    .mksm-unit__title
+      .container
+        h2 Минипогрузчик Четра МКСМ-1200A-1
+        p Комплектация "Базовая"
+    .container
+      .mksm-unit__content
+        .mksm-unit__images.swiper
+          .mksm-init__list.swiper-wrapper
+            for item in images
+              .mksm-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+        .mksm-unit__dimensions
+          +picture( "mksm1200ab", "mksm1200ab-graf", "jpg", 417, 590, "Габаритные размеры")
+        .mksm-unit__interiors.swiper
+          h2 Кабина и навесное оборудование
+          .mksm-init__interiors-list.swiper-wrapper
+            for item in interiors
+              .mksm-unit__interiors-item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+        .mksm-unit__info
+          h2 Основные характеристики
+          dl.mksm-unit__info-list
+            dt Модель двигателя
+            dd Kubota V3300 (Япония)
+            dt Мощность, л.с.(кВт)
+            dd 75 (55)
+            dt Трансмиссия
+            dd Гидростатическая передача
+            dt Грузоподъемность, кг
+            dd 1200
+            dt Тип подъема стрелы
+            dd Вертикальный
+            dt Стандартный ковш, м³
+            dd 0,7
+            dt Эксплуатационная масса, кг
+            dd 3580
+            dt Органы управления
+            dd Джойстики
+            dt Макс. скорость движения, км/ч
+            dd 14
+            dt Топливный бак, л.
+            dd 86
+            dt Шины пневматические
+            dd 12-16,5

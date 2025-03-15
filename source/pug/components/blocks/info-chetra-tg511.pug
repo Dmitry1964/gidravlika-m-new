@@ -1,0 +1,101 @@
+mixin info-chetra-tg511()
+  -
+    const images = [
+      {
+        path: "pipes-tg511",
+        image: "tg511-isometry-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122 ",
+      },
+      {
+        path: "pipes-tg511",
+        image: "tg511-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg511",
+        image: "tg511-right",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg511",
+        image: "tg511-left",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg511",
+        image: "tg511-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg511",
+        image: "tg511-isometry-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+    ]
+
+  -const frontOptions = ['Стрела стандартная - длина 8,9 м', 'Опора стрелы', 'Лебедка']
+  -const options = ['Двойной стеклопакет кабины', 'Система спутникового мониторинга ГЛОНАСС/GPS','Зависимый и независимый отопитель кабины','Система предпускового подогрева двигателя','Температурное исполнение -50С +35С','Аудиосистема','Автоматический звуковой сигнал заднего хода','Звуковой сигнал переднего хода','Боковые зеркала заднего вида','Сиденье с микроподрессовыванием и пневмоподвеской']
+
+  section.chetra-unit
+    .container
+      h2.visually-hidden Бульдозер Четра T40
+      .chetra-unit__content
+        .chetra-unit__slider.swiper
+          .chetra-init__list.swiper-wrapper
+            for item in images
+              .chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+
+        .chetra-unit__info
+          h3.chetra-unit__info-title Основные характеристики
+          dl.chetra-unit__info-list
+            dt Модель двигателя:
+            dd ЯМЗ 8501.10 / Cummins QSZ13
+            dt Мощность номинальная, кВт (л.с.):
+            dd 324 (440,6) / 396 (538)
+            dt Мощность эксплуатационная, кВт (л.с.):
+            dd 298 (405) / 360 (490)
+            dt Эксплуатационная масса, т:
+            dd от 63 до 64,8
+            dt Max грузоподъемность, т
+            dd 51 (плечо 2,5 м), 107 (плечо 1,22 м)
+            dt Грузоподъемность
+            dd 43,6 (плечо 2,5 м), 71,4 (плечо 1,22 м)
+            dt Длина стрел
+            dd 8,9 м
+
+          h3.chetra-unit__options-title Навесное оборудование
+          ul.chetra-unit__front-options
+            for item in frontOptions
+              li=item
+          h3.chetra-unit__options-title  Ширина башмака гусеницы, мм
+          dl.chetra-unit__info-list
+            dt Стандартная (левая /правая гусеница)
+            dd 1000 / 800
+            dt
+            dd
+          h3.chetra-unit__options-title Стандартная комплектация
+          ul.chetra-unit__options
+            for item in options
+              li=item

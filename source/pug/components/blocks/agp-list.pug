@@ -1,0 +1,152 @@
+mixin agp-list()
+  -
+    const agps = [
+      {
+        path: "agp",
+        image: "vipo-12-mini",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-12 Mini City",
+        base: "ГАЗ-А21",
+        lifting: "12",
+        rotation: "360°",
+        dimensions: "6,86 х 2,28 х 2,74",
+        altText: "Изображение автовышки",
+        href: "agp-12-mini.html"
+      },
+
+      {
+        path: "agp",
+        image: "vipo-12",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-12",
+        base: "ГАЗ-А21",
+        lifting: "12",
+        rotation: "360°",
+        dimensions: "6,125 х 2,2 х 2,755",
+        altText: "Изображение автовышки",
+        href: "agp-vipo-12.html"
+      },
+      {
+        path: "agp",
+        image: "vipo-15",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-15",
+        base: "ГАЗ-А21",
+        lifting: "15",
+        rotation: "360°",
+        dimensions: "6,2 х 2,2 х 2,75",
+        altText: "Изображение автовышки",
+        href: "agp-vipo-15.html"
+      },
+
+      {
+        path: "agp",
+        image: "vipo-17",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-17",
+        base: "ГАЗ-А21",
+        lifting: "17",
+        rotation: "360°",
+        dimensions: "5,7 х 2,2 х 3,03",
+        href: "agp-vipo-17.html",
+        altText: "Изображение автовышки",
+      },
+      {
+        path: "agp",
+        image: "vipo-18",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-18",
+        base: "ГАЗ-С41R13, ГАЗ-С41A23",
+        lifting: "18",
+        rotation: "360°",
+        dimensions: "6,7 х 2,55 х 2,26",
+        href: "agp-vipo-18.html",
+        altText: "Изображение автовышки",
+      },
+
+      {
+        path: "agp",
+        image: "vipo-20",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-20",
+        base: "ГАЗ-С41R13, ГАЗ-С41A23",
+        lifting: "20",
+        rotation: "360°",
+        dimensions: "8,6 х 2,55 х 3,09",
+        href: "agp-vipo-20.html",
+        altText: "Изображение автовышки"
+      },
+      {
+        path: "agp",
+        image: "vipo-22",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-22",
+        base: "ГАЗ-С41R13, ГАЗ-С41A23",
+        lifting: "22",
+        rotation: "360°",
+        dimensions: "7,0 х 2,55 х 3,5",
+        href: "agp-vipo-22.html",
+        altText: "Изображение автовышки",
+      },
+
+      {
+        path: "agp",
+        image: "vipo-24",
+        format: "jpg",
+        width: 218,
+        height: 158,
+        name: "Автогидроподъемник",
+        title: "ВИПО-24",
+        base: "ГАЗ-С41R13",
+        lifting: "24",
+        rotation: "360°",
+        dimensions: "6,88 х 2,28 х 3,51",
+        href: "agp-vipo-24.html",
+        altText: "Изображение автовышки"
+      },
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Автовышки
+        +aside-menu-vipo()
+        ul.catalog__list.catalog__list--vipo
+          each item in agps
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                span=item.name
+                h2.catalog__item-title=item.title
+              .catalog__item-params
+                dl
+                  dt Модель шасси
+                  dd=item.base
+                  dt Высота подъема, м
+                  dd=item.lifting
+                  dt Угол поворота стрелы
+                  dd=item.rotation
+                  dt Габариты (ДхВхШ), м
+                  dd=item.dimensions
+
+              +btn({text: "Подробнее", href: item.href})

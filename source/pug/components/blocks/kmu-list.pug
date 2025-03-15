@@ -1,0 +1,119 @@
+mixin kmu-list()
+  -
+    const kmus = [
+      {
+        path: "kmu",
+        image: "dvina-3200",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Кран-манипулятор",
+        title: "Двина 3200.8",
+        base: "ГАЗ-С41",
+        liftingMin: "450",
+        liftingMax: "3200",
+        boomMin: "2",
+        boomMax: "9",
+        rotation: "360°",
+        href: "kmu-dvina3200-8.html",
+        altText: "Изображение КМУ",
+      },
+      {
+        path: "kmu",
+        image: "dvina-4000",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Кран-манипулятор",
+        title: "Двина 4000.10",
+        base: "КАМАЗ-43118",
+        liftingMin: "1290",
+        liftingMax: "4000",
+        boomMin: "1.32",
+        boomMax: "9.6",
+        rotation: "360°",
+        href: "kmu-dvina4000.html",
+        altText: "Изображение КМУ",
+      },
+      {
+        path: "kmu",
+        image: "dvina-5000",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Кран-манипулятор",
+        title: "Двина 5000.10",
+        base: "КАМАЗ-43118",
+        liftingMin: "590",
+        liftingMax: "5000",
+        boomMin: "2",
+        boomMax: "10.2",
+        rotation: "360°",
+        href: "kmu-dvina5000.html",
+        altText: "Изображение КМУ",
+      },
+      {
+        path: "kmu",
+        image: "dvina-6300",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Кран-манипулятор",
+        title: "Двина 6300.12",
+        base: "КАМАЗ-65115",
+        liftingMin: "590",
+        liftingMax: "6300",
+        boomMin: "2",
+        boomMax: "12.3",
+        rotation: "360°",
+        href: "kmu-dvina6300.html",
+        altText: "Изображение КМУ",
+      },
+      {
+        path: "kmu",
+        image: "dvina-6500",
+        format: "jpg",
+        width: 218,
+        height: 160,
+        name: "Кран-манипулятор",
+        title: "Двина 6500.19",
+        base: "КАМАЗ-65115",
+        liftingMin: "300",
+        liftingMax: "6500",
+        boomMin: "1",
+        boomMax: "18.7",
+        rotation: "360°",
+        href: "kmu-dvina6500.html",
+        altText: "Изображение КМУ",
+      },
+
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Автовышки
+        +aside-menu-vipo()
+        ul.catalog__list.catalog__list--vipo
+          each item in kmus
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                span=item.name
+                h2.catalog__item-title=item.title
+              .catalog__item-params
+                dl
+                  dt Модель шасси
+                  dd=item.base
+                  dt Вылет min, м
+                  dd=item.boomMin
+                  dt Вылет max, м
+                  dd=item.boomMax
+                  dt Грузоподъемность
+                  dd=""
+                  dt минимальный вылет, кг
+                  dd=item.liftingMax
+                  dt максимальный вылет, кг
+                  dd=item.liftingMin
+                  dt Угол поворота стрелы
+                  dd=item.rotation
+              +btn({text: "Подробнее", href: item.href})

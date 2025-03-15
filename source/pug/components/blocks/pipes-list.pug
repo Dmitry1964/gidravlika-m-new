@@ -1,0 +1,77 @@
+mixin pipes-list()
+  -
+    const pipes = [
+      {
+        path: "pipes",
+        image: "pipes-tg122",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Трубоукладчик ЧЕТРА ТГ122",
+        power: "121,3 (165)/121,3 (165)",
+        massa: "от 23,5 до 26,3",
+        arm: "7 / 9",
+        title: "Трубоукладчик ЧЕТРА ТГ122",
+        href: "chetra-tg122.html"
+      },
+      {
+        path: "pipes",
+        image: "pipes-tg222",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т11",
+        power: "183,8 (250) / 193 (263)",
+        massa: "от 32,8 до 33,8",
+        arm: "6.5 / 9",
+        title: "Трубоукладчик ЧЕТРА ТГ222",
+        href: "chetra-tg222.html"
+      },
+      {
+        path: "pipes",
+        image: "pipes-tg302",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т15",
+        power: "243 (330) / 246 (335)",
+        massa: "от 40,8 до 45,4",
+        arm: "7.6 / 9",
+        title: "Трубоукладчик ЧЕТРА ТГ302",
+        href: "chetra-tg302.html"
+      },
+      {
+        path: "pipes",
+        image: "pipes-tg511",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер Т20",
+        power: "372 (506)",
+        massa: "от 64 до 67,3",
+        arm: "8.9",
+        title: "Трубоукладчик ЧЕТРА ТГ511",
+        href: "chetra-tg511.html"
+      },
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Бульдозеры
+        +aside-menu-chetra()
+        ul.catalog__list
+          each item in pipes
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                h2.catalog__item-title=item.title
+              .catalog__item-params
+                h3 Мощность номинальная
+                h3 ЯМЗ/Cummins, кВт (л.с.):
+                p.catalog__item-value=item.power
+                h3 Эксплутационная масса, т:
+                p.catalog__item-value=item.massa
+                .catalog__item-arm
+                  h3 Длина стрелы, м:
+                  p.catalog__item-value=item.arm
+              +btn({text: "Подробнее", href: item.href}).btn--chetra

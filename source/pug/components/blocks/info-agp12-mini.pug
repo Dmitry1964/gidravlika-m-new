@@ -1,0 +1,53 @@
+mixin info-agp12-mini()
+  -
+    const images = [
+      {
+        path: "agp-vipo12mini",
+        image: "agp-vipo12-mini-1",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-12 Мини ",
+        base: "ГАЗ-А21",
+        radius: "4.5",
+        dimensions: "6,86х2,28х2,74",
+      },
+    ]
+
+  section.vipo-unit
+    .container
+      h2.visually-hidden Автовышка Випо-12 Мини
+      .vipo-unit__content
+        .vipo-unit__slider.swiper
+          .vipo-init__list.swiper-wrapper
+            for item in images
+              .vipo-unit__item.swiper-slide(data-base=item.base)
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          if (images.length > 1)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .vipo-unit__images
+          +picture("agp-vipo12mini", "agp-vipo12-mini-graf", "jpg", 528, 590, "Диаграмма грузоподъемности")
+        .vipo-unit__options
+          dl.vipo-unit__options-list
+            dt Модель шасси
+            dd.vipo-unit__options-base ГАЗ-А21
+            dt Грузоподъемность люльки, кг
+            dd 120
+            dt Рабочая высота подъема, м
+            dd 12
+            dt Вылет, м
+            dd 4.5
+            dt Угол поворота стрелы
+            dd 360°
+            dt Габариты (ДхВхШ)
+            dd 6,86х2,28х2,74
+        .vipo-unit__features
+          ul.vipo-unit__features-list
+            li.vipo-unit__features-item Рычажно- телескопическая стрела (стрела 2 секции)
+            li.vipo-unit__features-item Цепная синхронизация выдвижения секций
+            li.vipo-unit__features-item Электрогидравлическое управление с пульта и с люльки
+            li.vipo-unit__features-item Размеры люльки 1100×700×700 (мм)
+            li.vipo-unit__features-item Электроизоляция люльки до 1000 В
+            li.vipo-unit__features-item Гидравлические шланги и проводка проложены внутри стрелы

@@ -1,0 +1,151 @@
+mixin info-agp22()
+  -
+    const images = [
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-1",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "ГАЗ-C41R13",
+        radius: "12",
+        dimensions: "7,0 × 2,55 × 3,5"
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-2",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "ГАЗ-С41А23",
+        radius: "12",
+        dimensions: "7,0× 2,55×3,8",
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-3",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "ГАЗ-С41R13",
+        radius: "12",
+        dimensions: "8,45 × 2,55 × 3,32",
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-4",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "ГАЗ-C42R13",
+        radius: "12",
+        dimensions: "7,2 × 2,55 × 3,7"
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-5",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "ГАЗ-С42А23",
+        radius: "12",
+        dimensions: "7,12 × 2,55 × 3,31",
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-6",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "ГАЗ-С42R13",
+        radius: "12",
+        dimensions: "9,10 × 2,55 × 3,18",
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-7",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "МАЗ-4371",
+        radius: "12",
+        dimensions: "9,10 × 2,55 × 3,18",
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-8",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "JAC-N80",
+        radius: "12",
+        dimensions: "7,55 х2,55 х 2.95",
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-9",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "КАМАЗ-43253",
+        radius: "12",
+        dimensions: "8,4 х2,55 х 3,25",
+      },
+      {
+        path: "agp-vipo22",
+        image: "agp-vipo22-10",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автовышка Випо-22",
+        base: "КАМАЗ-43502",
+        radius: "12",
+        dimensions: "8,45 х2,55 х 3,51",
+      },
+    ]
+  section.vipo-unit
+    .container
+      h2.visually-hidden Автовышка Випо-18
+      .vipo-unit__content
+        .vipo-unit__slider.swiper
+          .vipo-init__list.swiper-wrapper
+            for item in images
+              .vipo-unit__item.swiper-slide(data-base=item.base, data-dimensions=item.dimensions, data-radius=item.radius)
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          if (images.length > 1)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .vipo-unit__images
+          +picture("agp-vipo22", "agp-vipo22-graf", "jpg", 450, 590, "Диаграмма грузоподъемности")
+        .vipo-unit__options
+          dl.vipo-unit__options-list
+            dt Модель шасси
+            dd.vipo-unit__options-base ГАЗ-C41R13
+            dt Грузоподъемность люльки, кг
+            dd 300
+            dt Рабочая высота подъема, м
+            dd 22
+            dt Вылет, м
+            dd.vipo-unit__options-radius 12
+            dt Угол поворота стрелы
+            dd 360°
+            dt Габариты (ДхВхШ)
+            dd.vipo-unit__options-dimensions 7,0 × 2,55 × 3,5
+        .vipo-unit__features
+          ul.vipo-unit__features-list
+            li.vipo-unit__features-item Телескопическая стрела (основная стрела + 3 секции)
+            li.vipo-unit__features-item Цепная синхронизация выдвижения секций
+            li.vipo-unit__features-item Электрогидравлическое управление с пульта и с люльки
+            li.vipo-unit__features-item Размеры люльки  1400×780×1100 (мм)
+            li.vipo-unit__features-item Электроизоляция люльки до 1000 В
+            li.vipo-unit__features-item Гидравлические шланги и проводка проложены внутри стрелы

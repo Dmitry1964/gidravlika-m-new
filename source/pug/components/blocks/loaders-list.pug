@@ -1,0 +1,46 @@
+mixin loaders-list()
+  -
+    const pipes = [
+      {
+        path: "loaders",
+        image: "loader-pk12",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Погрузчик Четра ПК12",
+        power: "412 (560,3) / 382 (520)",
+        massa: "51 600",
+        title: "Колесный погрузчик ЧЕТРА ПК12",
+        href: "loader-chetra-pk12.html"
+      },
+      {
+        path: "loaders",
+        image: "loader-tk",
+        format: "jpg",
+        width: 218,
+        height: 141,
+        altText: "Бульдозер ТК25",
+        power: "412 (560,3) / 382 (520)",
+        massa: "46 518",
+        title: "Колесный бульдозер ЧЕТРА ТК25",
+        href: "loader-chetra-tk25.html"
+      },
+    ]
+  section.section-list
+    .container
+      .section-list__wrapper
+        h2.visually-hidden Бульдозеры
+        +aside-menu-chetra()
+        ul.catalog__list
+          each item in pipes
+            li.catalog__item
+              .catalog__item-image
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+                h2.catalog__item-title=item.title
+              .catalog__item-params
+                h3 Мощность номинальная
+                h3 ЯМЗ/Cummins, кВт (л.с.):
+                p.catalog__item-value=item.power
+                h3 Масса, т:
+                p.catalog__item-value=item.massa
+              +btn({text: "Подробнее", href: item.href}).btn--chetra

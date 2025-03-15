@@ -1,0 +1,34 @@
+mixin aside-menu-chetra()
+  -
+    const menu = [
+      {
+        name: "бульдозеры",
+        href: "bulldozers.html"
+      },
+      {
+        name: "трубоукладчики",
+        href: "pipes.html"
+      },
+      {
+        name: "минипогрузчики",
+        href: "mini-loaders.html"
+      },
+      {
+        name: "погрузчики",
+        href: "loaders.html"
+      },
+      {
+        name: "экскаваторы",
+        href: "excavator.html"
+      },
+      //- {
+      //-   name: "навесное оборудование",
+      //-   href: "#",
+      //- }
+    ]
+
+  aside.aside-menu.aside-menu--chetra
+    ul.aside-menu__list
+      each item in menu
+        li.aside-menu__item
+          a(href=item.href).aside-menu__link=item.name

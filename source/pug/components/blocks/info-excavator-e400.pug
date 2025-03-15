@@ -1,0 +1,64 @@
+mixin info-excavator-e400()
+  -
+    const images = [
+      {
+        path: "excavator-e400",
+        image: "excavator-e400-1",
+        format: "jpg",
+        width: 690,
+        height: 447,
+        altText: "Изображение экскаватора Четра Е400 ",
+      },
+    ]
+
+  section.excavator-unit
+    .container
+      .excavator-unit__content
+        .excavator-unit__images.chetra-unit__slider.swiper
+          .excavator-init__list.chetra-init__list.swiper-wrapper
+            for item in images
+              .excavator-unit__item.chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+        .excavator-unit__info
+          h2 Основные характеристики
+          dl.excavator-unit__info-list
+            dt Модель двигателя
+            dd Isuzu GH-6HK1
+            dt Мощность, кВт(л.с)
+            dd 212 кВт (288 л.с.)
+            dt Объем ковша, м³
+            dd 1.9
+            dt Масса, т
+            dd 39.3
+            dt Длина рукояти, мм
+            dd 2 800
+            dt Длина стрелы, мм
+            dd 6 500
+            dt Глубина копания - max (размер-J), мм
+            dd 7 020
+            dt Высота выгрузки - max (размер-U), мм
+            dd 7 010
+            dt Длина (размер-А), мм
+            dd 11 390
+            dt Ширина (размер-B), мм
+            dd 3 190
+            dt Высота по кабине (размер-H), мм
+            dd 3 270
+            dt Топливный бак, л
+            dd 610
+            dt Гидравлический бак, л
+            dd 300
+            dt Кондиционер
+            dd.excavator-unit__info-bolean
+            dt Воздушный фильтр с масляной ванной
+            dd.excavator-unit__info-bolean
+            dt Защитная сетка на крышу
+            dd.excavator-unit__info-bolean
+            dt Защитная сетка на ветровое стекло, нижнее
+            dd.excavator-unit__info-bolean
+
+        .excavator-unit__dimensions
+          +picture( "excavator-e400", "excavator-e400-dim", "jpg", 690, 180, "Габаритные размеры")

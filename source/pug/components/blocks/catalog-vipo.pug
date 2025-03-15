@@ -1,0 +1,84 @@
+mixin catalog-vipo()
+  -
+    const catalogItems = [
+      {
+        title: "автовышки",
+        path: "vipo",
+        image: "agp",
+        format: "jpg",
+        width: 200,
+        height: 115,
+        alt: "автовышки випо",
+        href: "agp.html"
+      },
+
+      {
+        title: "краны-манипуляторы",
+        path: "vipo",
+        image: "manipulator",
+        format: "jpg",
+        width: 200,
+        height: 146,
+        alt: "манипуляторы випо",
+        href: "kmu.html"
+      },
+      {
+        title: "автокраны",
+        path: "vipo",
+        image: "autokran",
+        format: "jpg",
+        width: 200,
+        height: 150,
+        alt: "автокраны випо",
+        href: "trackcrane.html"
+      },
+      {
+        title: "кму на базе трактора",
+        path: "vipo",
+        image: "kmu",
+        format: "jpg",
+        width: 200,
+        height: 163,
+        alt: "кму на базе трактора випо",
+        href: "kmu-tractor.html"
+      },
+      {
+        title: "бкм",
+        path: "vipo",
+        image: "bkm",
+        format: "jpg",
+        width: 200,
+        height: 114,
+        alt: "бурильно крановые машины випо",
+        href: "bkm.html"
+      },
+      {
+        title: "мусоровозы",
+        path: "vipo",
+        image: "garbage",
+        format: "jpg",
+        width: 200,
+        height: 115,
+        alt: "мусоровозы випо",
+        href: "garbage.html"
+      },
+
+    ]
+
+  section.catalog-vipo
+    .catalog-vipo__title
+      .container
+        h2 каталог vipo
+    .catalog-vipo-content
+      .container
+        .catalog-vipo__wrapper.swiper
+          .catalog-vipo__list.swiper-wrapper
+            each item in catalogItems
+              .catalog-vipo__item.swiper-slide
+                a(href=item.href)
+                  .catalog-vipo__item-image
+                    +picture(item.path, item.image, item.format, item.width, item.height, item.alt)
+                  h2.catalog-vipo__item-title=item.title
+          .swiper-button-next
+          .swiper-button-prev
+          .swiper-pagination

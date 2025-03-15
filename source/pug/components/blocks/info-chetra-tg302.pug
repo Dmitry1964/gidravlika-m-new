@@ -1,0 +1,101 @@
+mixin info-chetra-tg302()
+  -
+    const images = [
+      {
+        path: "pipes-tg302",
+        image: "tg302-isometry-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122 ",
+      },
+      {
+        path: "pipes-tg302",
+        image: "tg302-front",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg302",
+        image: "tg302-right",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg302",
+        image: "tg302-left",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg302",
+        image: "tg302-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+      {
+        path: "pipes-tg302",
+        image: "tg302-isometry-back",
+        format: "jpg",
+        width: 680,
+        height: 475,
+        altText: "Изображение трубоукладчик ТГ122",
+      },
+    ]
+
+  -const frontOptions = ['Стрела стандартная - длина 7,6 м', 'Стрела удлиненная - длина 9 м', 'Опора стрелы']
+  -const options = ['Двойной стеклопакет кабины', 'Система спутникового мониторинга ГЛОНАСС/GPS','Зависимый и независимый отопитель кабины','Система предпускового подогрева двигателя','Температурное исполнение -50С +35С','Аудиосистема','Автоматический звуковой сигнал заднего хода','Звуковой сигнал переднего хода','Боковые зеркала заднего вида','Сиденье с микроподрессовыванием и пневмоподвеской']
+
+  section.chetra-unit
+    .container
+      h2.visually-hidden Бульдозер Четра T40
+      .chetra-unit__content
+        .chetra-unit__slider.swiper
+          .chetra-init__list.swiper-wrapper
+            for item in images
+              .chetra-unit__item.swiper-slide
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .swiper-button-next(style={color: '#f3b411'})
+          .swiper-button-prev(style={color: '#f3b411'})
+          .swiper-pagination
+
+        .chetra-unit__info
+          h3.chetra-unit__info-title Основные характеристики
+          dl.chetra-unit__info-list
+            dt Модель двигателя:
+            dd ЯМЗ-238-ДЕ2-28 / Cummins QSМ11
+            dt Мощность номинальная, кВт (л.с.):
+            dd 243 (330) / 246 (335)
+            dt Мощность эксплуатационная, кВт (л.с.):
+            dd 228 (310) / 228 (310)
+            dt Эксплуатационная масса, т:
+            dd от 40,8 до 45,4
+            dt Max грузоподъемность, т
+            dd 31 (плечо 2,5 м), 65,7 (плечо 1,22 м)
+            dt Грузоподъемность
+            dd 26,5 (плечо 2,5 м), 43,4 (плечо 1,22 м)
+            dt Длина стрел
+            dd 7,6 м, 9 м
+
+          h3.chetra-unit__options-title Навесное оборудование
+          ul.chetra-unit__front-options
+            for item in frontOptions
+              li=item
+          h3.chetra-unit__options-title  Ширина башмака гусеницы, мм
+          dl.chetra-unit__info-list
+            dt Стандартная
+            dd 610
+            dt
+            dd
+          h3.chetra-unit__options-title Стандартная комплектация
+          ul.chetra-unit__options
+            for item in options
+              li=item

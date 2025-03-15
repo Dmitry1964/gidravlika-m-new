@@ -1,0 +1,106 @@
+mixin info-dvina32008()
+  -
+    const images = [
+      {
+        path: "kmu-dvina3200-8",
+        image: "kmu-dvina3200-1",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение КМУ Двина 3200",
+        base: "ГАЗ-C41A43",
+        liftingMin: "450",
+        liftingMax: "3 200",
+        radiusMin: "2",
+        radiusMax: "9",
+        topMax: "11.7",
+        bottomMax: "13.3",
+      },
+      {
+        path: "kmu-dvina3200-8",
+        image: "kmu-dvina3200-2",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение КМУ Двина 3200",
+        base: "ГАЗ-C42R13",
+        liftingMin: "450",
+        liftingMax: "3 200",
+        radiusMin: "2",
+        radiusMax: "9",
+        topMax: "11.7",
+        bottomMax: "13.3",
+      },
+      {
+        path: "kmu-dvina3200-8",
+        image: "kmu-dvina3200-3",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение КМУ Двина 3200",
+        base: "КАМАЗ-65116",
+        liftingMin: "450",
+        liftingMax: "3 200",
+        radiusMin: "2",
+        radiusMax: "9",
+        topMax: "11.7",
+        bottomMax: "13.3",
+      },
+      {
+        path: "kmu-dvina3200-8",
+        image: "kmu-dvina3200-4",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение КМУ Двина 3200",
+        base: "JAC-80",
+        liftingMin: "450",
+        liftingMax: "3 200",
+        radiusMin: "1.5",
+        radiusMax: "9",
+        topMax: "10.4",
+        bottomMax: "11.8",
+      },
+
+
+    ]
+  section.kmu-unit
+    .container
+      h2.visually-hidden Автовышка Випо-18
+      .kmu-unit__content
+        .kmu-unit__slider.swiper
+          .kmu-init__list.swiper-wrapper
+            for item in images
+              .kmu-unit__item.swiper-slide(data-base=item.base, data-dimensions=item.dimensions, data-liftingmin=item.liftingMin, data-liftingmax=item.liftingMax, data-radiusmin=item.radiusMin, data-radiusmax=item.radiusMax, data-topmax=item.topMax, data-bottommax=item.bottomMax)
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          if (images.length > 1)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .kmu-unit__images
+          +picture("kmu-dvina3200-8", "kmu-dvina3200-graf", "jpg", 597, 590, "Диаграмма грузоподъемности")
+        .kmu-unit__options
+          dl.kmu-unit__options-list
+            dt Модель шасси
+            dd.kmu-unit__options-base ГАЗ-C41A43
+            dt Грузоподъемность max, кг
+            dd.kmu-unit__options-lifting--max 3 200
+            dt Грузоподъемность min, кг
+            dd.kmu-unit__options-lifting--min 450
+            dt Вылет max, м
+            dd.kmu-unit__options-radius--max 9
+            dt Вылет min, м
+            dd.kmu-unit__options-radius--min 2
+            dt Рабочая высота max,м
+            dd.kmu-unit__options-top 11.7
+            dt Глубина опускания max, м
+            dd.kmu-unit__options-bottom 13.3
+        .kmu-unit__features
+          ul.kmu-unit__features-list
+            li.kmu-unit__features-item Телескопическая стрела (основная стрела + 2 секции)
+            li.kmu-unit__features-item Цепная синхронизация выдвижения секций
+            li.kmu-unit__features-item Гидравлическое управление с портала
+            li.kmu-unit__features-item Дополнительно может комплектоваться люлькой и буром
+            li.kmu-unit__features-item Троссовая лебедка с крюком
+            li.kmu-unit__features-item Гидравлические шланги и проводка проложены внутри стрелы
+            li.kmu-unit__features-item Вращение стрелы на 360° без ограничений

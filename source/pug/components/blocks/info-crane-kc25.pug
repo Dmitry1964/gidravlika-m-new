@@ -1,0 +1,62 @@
+mixin info-crane-kc25()
+  -
+    const images = [
+      {
+        path: "crane-kc25",
+        image: "vipo-kc25-1",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автокрана кс25",
+      },
+      {
+        path: "crane-kc25",
+        image: "vipo-kc25-2",
+        format: "jpg",
+        width: 690,
+        height: 590,
+        altText: "Изображение автокрана кс25",
+      },
+    ]
+  section.vipo-unit
+    .container
+      h2.visually-hidden Автовышка Випо-18
+      .vipo-unit__content
+        .vipo-unit__slider.swiper
+          .vipo-init__list.swiper-wrapper
+            for item in images
+              .vipo-unit__item.swiper-slide(data-base=item.base, data-dimensions=item.dimensions, data-radius=item.radius)
+                +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          if (images.length > 1)
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+        .vipo-unit__info
+          p Автомобильный стреловой кран VISIT это инновационная крановая  установка с отличной манёвренностью и мобильностью. Основные несущие конструкции автокрана рассчитаны с использованием компьютерных систем, основанных на методе конечных элементов и изготовлены из высококачественных материалов (DOMEX), что гарантирует достаточную прочность и длительный рабочий ресурс.
+          p За счет высокого значения грузового момента сохраняется устойчивость автокрана от опрокидывания даже при перемещении грузов с предельным показателем массы. Высокому значению грузового момента установка обязана задействованию противовеса и выдвижных опор. Возможна работа на втянутых опорах, если масса перемещаемого груза невелика
+          P Кран оснащен телескопической стрелой ОВОИДного сечения. Данное сечение значительно увеличивает показатель местной устойчивости секций стрелы, что позволяет увеличить грузовысотные характеристики. Телескопирование стрелы осуществляется одним гидроцилиндром и канатными полиспастами, что позволяет равномерно распределить нагрузку по всем секциям стрелы.
+        .vipo-unit__options
+          dl.vipo-unit__options-list
+            dt Модель шасси
+            dd.vipo-unit__options-base КАМАЗ-43118
+            dt Грузоподъемность максимальная, т
+            dd 25
+            dt Длина стрелы, м
+            dd 31
+            dt Максимальный вылет, м
+            dd.vipo-unit__options-radius 29
+            dt Вылет при максимальной грузоподъемности, м
+            dd.vipo-unit__options-radius 3.4
+            dt База выносных опор, м
+            dd 5.4
+            dt Расстояние между выносными опорами,м
+            dd 6
+        .vipo-unit__features
+          ul.vipo-unit__features-list
+            li.vipo-unit__features-item Телескопическая овойдная 4 секционная стрела
+            li.vipo-unit__features-item Стрела изготовлена из высокопрочной конструкционной стали
+            li.vipo-unit__features-item Аутригеры П-образные
+            li.vipo-unit__features-item Устройство ограничения зоны обслуживания и ограничитель предельного груза
+            li.vipo-unit__features-item Указатель угла наклона
+            li.vipo-unit__features-item Гидравлическое управление с места оператора
+            li.vipo-unit__features-item Гидравлическое управление аутригерами
