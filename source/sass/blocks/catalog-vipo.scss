@@ -1,0 +1,50 @@
+.catalog-vipo {
+  padding: 20px 0 20px;
+}
+
+.catalog-vipo__title {
+  background-color: $color-smalt;
+
+  & h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    color: $color-lavender-blue;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+
+    @include vp-767 {
+      font-size: 20px;
+      padding: 10px 0;
+    }
+  }
+}
+
+.catalog-vipo__wrapper {
+  padding: 60px 0 60px;
+  box-shadow: 0 0 5px 0 $color-light-steel-blue;
+  max-width: 1360px;
+  height: 312px;
+}
+
+.catalog-vipo__item {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.catalog-vipo__item-image img {
+  margin: 0 auto;
+}
+
+.catalog-vipo__item h2 {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-smalt;
+}

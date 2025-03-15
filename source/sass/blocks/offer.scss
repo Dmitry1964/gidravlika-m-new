@@ -1,0 +1,249 @@
+.offer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $color-snow;
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    margin-bottom: 15px;
+  }
+}
+
+.offer__title {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $color-mardi-gras;
+  text-align: center;
+  margin: 0 0 50px;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 20px;
+  }
+}
+
+.offer__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+
+  @include vp-1023 {
+    column-gap: 20px;
+  }
+
+  @include vp-767 {
+    display: block // grid-template-columns: 1fr;
+  }
+}
+
+.offer__info {
+  max-width: 400px;
+  justify-self: flex-end;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
+}
+
+.offer__info-list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.offer__info-item {
+  padding: 20px;
+  background-color: $color-whitesmoke;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform $trans-600;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  &--current {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.offer__info-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid $color-dark-tangerine;
+
+  & h3 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0 0 0 20px;
+    color: $color-mardi-gras;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.offer__info-description {
+  padding-top: 20px;
+
+  & h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 20px;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  & p {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.offer__info-description ul {
+  margin: 0 0 10px;
+  padding: 0 0 0 20px;
+}
+
+.offer__info-description li {
+  font-family: "Arial", sans-serif;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.offer__buttons {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.offer__button {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px 10px 30px;
+  background-color: $color-whitesmoke;
+  width: 400px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  color: $color-mardi-gras;
+  transition: background-color $trans-default, color $trans-default, opasity $trans-600;
+
+  @include vp-1023 {
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  &--current {
+    background-color: $color-palatine-purple;
+    color: $color-dark-tangerine;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.offer__button-img {
+  padding: 5px;
+  background-color: $color-dark-tangerine;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: background-color $trans-default;
+
+  @include vp-1023 {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.offer__button--current .offer__button-img {
+  background-color: $color-lightning-yellow;
+}
+
+.offer__button-title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.offer__slider-buttons {
+  display: none;
+  padding-top: 20px;
+  justify-content: center;
+
+  @include vp-767 {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.offer__slider-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid $color-lightning-yellow;
+  background-color: $color-whitesmoke;
+  border-radius: 50%;
+}
+
+.offer__slider-btn--disabled {
+  opacity: 0.5;
+}
+
+.offer__info-video {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.offer__title-video {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0 0 0 20px;
+  color: $color-mardi-gras;
+
+  @include vp-767 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+}

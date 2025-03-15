@@ -1,0 +1,93 @@
+.excavator-unit {
+  padding: 20px 0;
+}
+
+.excavator-unit__content {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  row-gap: 40px;
+  column-gap: 20px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.excavator-unit__item {
+  padding-left: 10px;
+}
+
+.excavator-unit__images {
+  width: 100%;
+  max-width: 690px;
+  max-height: 475px;
+
+  @include vp-1023 {
+    max-width: 500px;
+  }
+
+  @include vp-767 {
+    max-width: 690px;
+  }
+}
+
+.excavator-unit__info {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.excavator-unit__info h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: $color-mardi-gras;
+  text-align: center;
+}
+
+.excavator-unit__info-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  color: $color-mardi-gras;
+  font-weight: 300;
+  font-size: 20px;
+
+  & dt {
+    padding: 5px 0;
+  }
+
+  & dd {
+    padding: 5px 0;
+    margin: 0;
+    text-align: right;
+  }
+
+  @include vp-1023 {
+    font-size: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.excavator-unit__dimensions {
+  justify-self: center;
+}
+
+.excavator-unit__info-list dt:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}
+
+.excavator-unit__info-list dd:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}
+
+.excavator-unit__info-bolean {
+  background-image: url("../img/svg/icon-ok.svg");
+  background-size: 24px 24px;
+  background-position: right;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,7 @@
+.map {
+  height: 460px;
+
+  @include vp-767 {
+    height: 300px;
+  }
+}

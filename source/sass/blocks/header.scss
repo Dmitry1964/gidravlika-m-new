@@ -1,13 +1,97 @@
 .header {
-  padding: 28px 0;
+  background-color: $color-midnight-express;
+  padding: 25px 0;
 
-  background-color: $color-neon-blue;
+  @include vp-1023 {
+    padding: 15px 0;
+  }
+}
 
-  .container {
-    display: flex;
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+
+  @include vp-1023 {
+    padding: 0 25px;
   }
 
-  &__logo {
-    color: $color-default-white;
+  @include vp-767 {
+    padding: 0 10px;
+  }
+}
+
+.header__content-logo {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+
+  @include vp-767 {
+    gap: 10px;
+    align-items: center;
+  }
+
+  & p {
+    background: linear-gradient(90deg, $color-neon-blue, $color-slate-blue);
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+}
+
+.header__content-logo img {
+  @include vp-1023 {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.header__content-phone {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 25px;
+}
+
+.header__content-phone img:first-child {
+  @include vp-1023 {
+    width: 116px;
+    height: 30px;
+  }
+}
+
+.header__content-phone img:nth-child(n+2) {
+  @include vp-1023 {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.btn.header__link {
+  font-size: 26px;
+  font-weight: 400;
+  color: $color-neon-blue;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 20px;
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }

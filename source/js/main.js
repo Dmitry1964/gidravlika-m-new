@@ -1,9 +1,14 @@
-import {mobileVhFix} from './utils/mobile-vh-fix.js';
+import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
-import {CustomSelect} from './modules/select/custom-select';
-import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-
+import {initCustomSelect} from './modules/form/init-custom-select';
+import {initFormValidate} from './modules/form/init-form-validate';
+import './modules/map';
+import './modules/slider';
+import './modules/agp-slider';
+import './modules/kmu-slider';
+import './modules/breadcrumbs';
+import './modules/mksm-slider';
+import {initOffer} from './modules/modals/offer';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -11,8 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
-  mobileVhFix();
-
+  iosVhFix();
+  initOffer();
   // Modules
   // ---------------------------------
 
@@ -20,13 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    uploadFile();
-    uploadImageDrop();
-    const select = new CustomSelect();
-    select.init();
-    const form = new Form();
-    window.form = form;
-    form.init();
+    initCustomSelect();
+    initFormValidate();
   });
 });
 

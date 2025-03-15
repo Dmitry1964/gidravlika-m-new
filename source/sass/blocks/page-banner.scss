@@ -1,0 +1,35 @@
+.page-banner {
+  padding-bottom: 20px;
+}
+
+.page-banner__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-banner__title {
+  font-size: 48px;
+  text-align: center;
+  color: $color-smalt;
+  text-transform: uppercase;
+
+  @include vp-1279 {
+    font-size: 42px;
+  }
+
+  @include vp-1023 {
+    font-size: 32px;
+    right: 40px;
+    top: 40px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    position: static;
+    text-align: center;
+  }
+
+  &.title-chetra {
+    color: $color-mardi-gras;
+  }
+}

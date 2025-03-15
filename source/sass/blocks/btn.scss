@@ -1,17 +1,29 @@
 .btn {
   display: inline-flex;
   padding: 10px 20px;
+  margin-bottom: 10px;
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  background-color: $color-smalt;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
+  width: 100%;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+
   &--red {
     background-color: $color-torch-red;
+  }
+
+  &--chetra {
+    background-color: $color-dark-tangerine;
+    color: $color-mardi-gras;
   }
 
   &:disabled {
@@ -20,7 +32,10 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
 }

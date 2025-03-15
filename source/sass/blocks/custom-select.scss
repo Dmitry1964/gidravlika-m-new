@@ -1,14 +1,8 @@
 .custom-select {
   position: relative;
 
-  width: 300px;
-  padding: 14px 0 28px;
-  margin: 0 0 44px 0;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
-  }
+  width: 250px;
+  padding: 30px 0;
 
   &__label {
     position: absolute;
@@ -17,13 +11,9 @@
 
     transform: translateY(-50%);
 
-    transition: transform 0.3s ease, opacity  0.3s ease;
+    transition: transform $trans-default, opacity $trans-default;
 
     pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
-    }
   }
 
   &__placeholder {
@@ -31,15 +21,11 @@
     top: 50%;
     left: 10px;
 
-    transform: translateY(-80%);
+    transform: translateY(-50%);
 
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform $trans-default, opacity $trans-default;
 
     pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
-    }
   }
 
   select {
@@ -63,34 +49,29 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 48px;
+    height: 40px;
     padding: 5px 10px;
 
-    background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: $color-transparent;
+    border: 2px solid rgba($color-default-black, 0.2);
     border-radius: 5px;
     outline: none;
     cursor: pointer;
 
-    transition: border 0.3s ease;
+    transition: border $trans-default;
 
     &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba($color-default-black, 0.5);
     }
 
     &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
-    }
-
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.3;
+      border: 2px solid rgba($color-default-black, 0.8);
     }
   }
 
   &__list {
     position: absolute;
-    bottom: 10px;
+    bottom: 32px;
     z-index: 1;
 
     width: 100%;
@@ -101,13 +82,13 @@
 
     list-style: none;
 
-    background-color: #ffffff;
-    border: 2px solid #000000;
+    background-color: $color-default-white;
+    border: 2px solid $color-default-black;
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;
 
-    transition: visibility 0.3s ease, opacity 0.3s ease;
+    transition: visibility $trans-default, opacity $trans-default;
   }
 
   &__item {
@@ -116,39 +97,33 @@
     outline: none;
     cursor: pointer;
 
-    transition: background-color 0.3s ease;
+    transition: background-color $trans-default;
 
     &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba($color-default-white, 0.2);
 
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          background-color: rgba($color-default-white, 0.2);
         }
       }
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
     }
 
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: rgba($color-default-white, 0.4);
       }
-    }
-
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
     }
   }
 
   &__error {
     position: absolute;
-    bottom: -15px;
+    bottom: 0;
     left: 0;
 
-    color: #ff1553;
+    color: $color-torch-red;
 
     opacity: 0;
 
@@ -156,8 +131,6 @@
   }
 
   &__text {
-    font-size: 20px;
-    line-height: 24px;
     flex-shrink: 0;
     width: 80%;
     overflow: hidden;
@@ -168,7 +141,7 @@
 
     opacity: 0;
 
-    transition: opacity 0.3s ease 0.1s;
+    transition: opacity $trans-default 0.1s;
 
     br {
       display: none;
@@ -181,26 +154,18 @@
     height: 10px;
     margin-left: auto;
 
-    background-color: #000000;
+    background-color: $color-default-black;
 
-    transition: transform 0.3s ease;
+    transition: transform $trans-default;
 
     clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
-  }
-
-  &.is-disabled {
-    pointer-events: none;
-
-    .custom-select__list {
-      display: none;
-    }
   }
 
   &.open-up {
     .custom-select__list {
       bottom: auto;
       top: 0;
-      transform: translateY(calc(-100% + 10px));
+      transform: translateY(calc(-100% + 30px));
     }
   }
 
@@ -239,11 +204,11 @@
     }
 
     .custom-select__button {
-      border: 2px solid #ff1553;
+      border: 2px solid $color-torch-red;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 2px solid rgba($color-torch-red, 0.5);
       }
     }
   }
@@ -283,20 +248,6 @@
 
     .custom-select__text {
       opacity: 1;
-    }
-  }
-
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
     }
   }
 }

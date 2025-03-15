@@ -1,0 +1,77 @@
+.kmu-unit {
+  padding: 20px 0;
+}
+
+.kmu-unit__content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+.kmu-unit__slider {
+  width: 100%;
+  max-width: 680px;
+  max-height: 590px;
+}
+
+.kmu-unit__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.kmu-unit__options-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  color: $color-smalt;
+  font-weight: 300;
+
+  & dt {
+    padding: 5px 0;
+  }
+
+  & dd {
+    margin: 0;
+    padding: 5px 0;
+    text-align: right;
+  }
+
+  @include vp-1023 {
+    font-size: 14px;
+  }
+}
+
+.kmu-unit__options-list dt:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}
+
+.kmu-unit__options-list dd:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}
+
+.kmu-unit__features-list {
+  list-style: none;
+  color: $color-smalt;
+  font-weight: 300;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 14px;
+  }
+}
+
+.kmu-unit__features-item {
+  padding: 5px 0;
+}
+
+.kmu-unit__features-item:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}

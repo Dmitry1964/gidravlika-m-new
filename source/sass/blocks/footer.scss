@@ -1,5 +1,106 @@
 .footer {
-  padding: 40px 0;
+  display: flex;
+  padding-bottom: 20px;
+  padding-top: 30px;
 
-  background-color: $color-neon-blue;
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.footer__left {
+  display: flex;
+  justify-content: flex-end;
+  padding: 25px 50px 25px;
+  background-color: $color-smalt;
+  width: 50%;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 10px 20px;
+    display: block;
+  }
+}
+
+.footer__left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+
+  @include vp-767 {
+    justify-content: center;
+  }
+}
+
+.footer__sales {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__sales-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $color-snow;
+  margin: 0;
+  text-align: end;
+
+  & dd {
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 300;
+  }
+
+  & dt {
+    padding: 5px 0;
+
+    @include vp-767 {
+      text-align: start;
+    }
+  }
+
+  & a {
+    color: $color-snow;
+  }
+}
+
+.footer__service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  text-align: end;
+
+  & dd {
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 300;
+  }
+
+  & dt {
+    padding: 5px 0;
+    color: $color-neon-carrot;
+
+    @include vp-767 {
+      text-align: start;
+    }
+  }
+
+  & a {
+    color: $color-lightning-yellow;
+  }
+}
+
+
+.footer__right {
+  width: 50%;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }

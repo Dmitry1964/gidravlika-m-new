@@ -1,0 +1,135 @@
+.mksm-unit {
+  padding: 20px 0;
+
+  @include vp-767 {
+    padding: 10px 0;
+  }
+}
+
+.mksm-unit__title {
+  padding: 10px 0;
+  margin: 0 0 10px;
+  background-color: $color-snow;
+  text-align: center;
+  color: $color-mardi-gras;
+}
+
+.mksm-unit__title h2 {
+  margin: 0 0 20px;
+  font-size: 36px;
+  font-weight: 400;
+
+  @include vp-767 {
+    font-size: 22px;
+    margin: 0 0 10px;
+  }
+}
+
+.mksm-unit__title p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 300;
+
+  @include vp-767 {
+    font-size: 18px;
+  }
+}
+
+
+.mksm-unit__content {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  column-gap: 2%;
+  align-items: center;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}
+
+.mksm-unit__images {
+  width: 100%;
+  max-width: 680px;
+  max-height: 475px;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+}
+
+.mksm-unit__dimensions {
+  display: flex;
+  justify-content: center;
+}
+
+.mksm-unit__interiors {
+  width: 100%;
+  max-width: 680px;
+  max-height: 475px;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+
+.mksm-unit__interiors h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: $color-mardi-gras;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.mksm-unit__interiors-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mksm-unit__info {
+  align-self: flex-start;
+}
+
+.mksm-unit__info h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: $color-mardi-gras;
+  text-align: center;
+}
+
+.mksm-unit__info-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  color: $color-mardi-gras;
+  font-weight: 300;
+  font-size: 20px;
+
+  & dt {
+    padding: 5px 0;
+  }
+
+  & dd {
+    padding: 5px 0;
+    margin: 0;
+    text-align: right;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.mksm-unit__info-list dt:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}
+
+.mksm-unit__info-list dd:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}

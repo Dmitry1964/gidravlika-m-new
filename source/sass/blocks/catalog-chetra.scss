@@ -1,0 +1,46 @@
+.catalog-chetra {
+  padding: 0 0 20px;
+}
+
+.catalog-chetra__title {
+  background-color: $color-mardi-gras;
+
+  & h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    color: $color-dark-tangerine;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+
+    @include vp-767 {
+      font-size: 20px;
+      padding: 10px 0;
+    }
+  }
+}
+
+.catalog-chetra__wrapper {
+  padding: 10px 0 60px;
+  box-shadow: 0 0 5px 0 $color-snuff;
+  max-width: 1360px;
+  height: 312px;
+}
+
+.catalog-chetra__item {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.catalog-chetra__item h2 {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-mardi-gras;
+}

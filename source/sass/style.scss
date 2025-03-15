@@ -2,7 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 8.4.7
+// Swiper 7.4.1
 // @import "vendor/swiper";
 
 // Global
@@ -20,6 +20,16 @@
 // ---------------------------------
 
 @import "blocks/header";
+@import "blocks/banner";
+@import "blocks/info";
+@import "blocks/catalog-chetra";
+@import "blocks/catalog-vipo";
+@import "blocks/breadcrumbs";
+@import "blocks/page-banner";
+@import "blocks/aside-menu";
+@import "blocks/section-list";
+@import "blocks/catalog";
+@import "blocks/map";
 @import "blocks/main-nav";
 @import "blocks/footer";
 @import "blocks/modal";
@@ -27,53 +37,29 @@
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
-@import "blocks/input-upload";
+@import "blocks/chetra-unit";
+@import "blocks/vipo-unit";
+@import "blocks/kmu-unit";
+@import "blocks/bkm-unit";
+@import "blocks/mksm-unit";
+@import "blocks/excavator-unit";
+@import "blocks/catalogs";
+@import "blocks/offer";
+@import "blocks/offer-banner";
 
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
 
-// ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
+// ❗ обязательно используйте @media для отключения ховеров на тач устройствах
 // но не используем для текстовых полей ( input, textarea )
-// так же в сборке есть отдельный миксин для hover
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
+/* @media (hover: hover), screen and (min-width: 0\0) {
+  &:hover,
+  &:focus {
+    color: $color-default-white;
   }
-*/
-// для focus
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-// и для active
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
+} */
+
 // адаптив пишем внутри каждого класса (смотрим container.scss)
 
 // для фикса проблем с vh на iOS в сборке подключен скрипт

@@ -16,7 +16,7 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
+  // font-family: "Oswald", Arial, sans-serif;
   color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
@@ -30,6 +30,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  font-family: $ff-placeholder;
 
   background-color: $color-default-white;
 }
@@ -126,4 +127,11 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @include vp-767 {
+    display: none;
+  }
 }

@@ -1,0 +1,13 @@
+.section-list {
+  padding: 15px 0 15px;
+}
+
+.section-list__wrapper {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  column-gap: 30px;
+
+  @include vp-767 {
+    display: flex;
+  }
+}

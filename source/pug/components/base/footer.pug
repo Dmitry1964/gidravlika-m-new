@@ -1,3 +1,30 @@
 mixin footer(footerMods)
-  footer.footer(class=footerMods)
-    .container
+  footer.footer
+    .footer__left(itemscope, itemtype="http://schema.org/Organization")
+      .footer__left-content
+        .footer__logo
+          +imgsvg("svg", "logo", "svg", 50, 50, "Логотип Гидравлика М")
+          +imgsvg("svg", "title", "svg", 175, 45, "Гидравлика М")
+        .footer__sales
+          dl.footer__sales-list
+            dt Отдел продаж
+            dd
+              a(href="tel:+78442263103") 8 (8442) 263-103
+            dt=""
+            dd
+              a(href="tel:+79053953202") 8 905 395-32-02
+            dt Электронная почта
+            dd
+              a(href="mailto:gidravlika-m@mail.ru") gidravlika-m@mail.ru
+          dl.footer__service-list
+            dt Ремонт и сервис спецтехники
+            dd
+              a(href="tel:+79610793209") 8 961 079-32-09
+            dt Ремонт оборудования
+            dd
+              a(href="tel:+79608726622") 8 960 872-66-22
+            dt web site
+            dd
+              a(href="http://www.gidravlika-m.ru", target="blank") gidravlika-m.ru
+    .footer__right
+      div.map#map

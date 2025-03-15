@@ -1,0 +1,108 @@
+.vipo-unit {
+  padding: 20px 0;
+}
+
+.vipo-unit__content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+.vipo-unit__slider {
+  width: 100%;
+  max-width: 690px;
+  max-height: 590px;
+}
+
+.vipo-unit__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.vipo-unit__info {
+  font-weight: 300;
+  text-align: justify;
+  padding-left: 20px;
+  color: $color-smalt;
+
+
+  @include vp-767 {
+    font-size: 12px;
+    padding: 0 10px;
+    line-height: 18px;
+  }
+}
+
+.vipo-unit__options-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  color: $color-smalt;
+  font-weight: 300;
+
+  & dt {
+    padding: 5px 0;
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  & dd {
+    margin: 0;
+    padding: 5px 0;
+
+    @include vp-767 {
+      padding: 0;
+      text-align: right;
+    }
+  }
+
+  @include vp-1023 {
+    font-size: 14px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+  }
+}
+
+.vipo-unit__options-list dt:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}
+
+.vipo-unit__options-list dd:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}
+
+.vipo-unit__features-list {
+  list-style: none;
+  color: $color-smalt;
+  font-weight: 300;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 14px;
+  }
+}
+
+.vipo-unit__features-item {
+  padding: 5px 0;
+
+  @include vp-767 {
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
+.vipo-unit__features-item:nth-of-type(2n + 1) {
+  background-color: $color-snow;
+}

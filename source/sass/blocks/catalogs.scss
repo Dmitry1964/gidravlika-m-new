@@ -1,0 +1,163 @@
+.catalogs {
+  padding: 30px 0;
+
+  @include vp-767 {
+    padding: 10px 0;
+  }
+}
+
+.catalogs__title {
+  font-size: 32px;
+  line-height: normal;
+  color: $color-smalt;
+  margin: 10px 0 30px;
+  text-align: center;
+
+  @include vp-767 {
+    font-size: 26px;
+    margin: 0;
+  }
+}
+
+.catalogs__items {
+  display: flex;
+  height: auto;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.catalogs__left {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  padding: 30px 50px;
+  background-image: url("../img/banners/catalogs-chetra.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $color-palatine-purple;
+
+  @include vp-767 {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+}
+
+.catalogs__right {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 30px 50px;
+  background-image: url("../img/banners/catalogs-vipo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $color-smalt;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.catalogs__left-title {
+  font-size: 36px;
+  line-height: normal;
+  color: $color-dark-tangerine;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 32px;
+  }
+
+  @include vp-767 {
+    font-size: 26px;
+  }
+}
+
+.catalogs__right-title {
+  font-size: 36px;
+  line-height: normal;
+  color: $color-lavender-blue;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 32px;
+  }
+
+  @include vp-767 {
+    font-size: 26px;
+  }
+}
+
+
+.catalogs__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0 0;
+  padding: 0 0 0 30px;
+  list-style: none;
+}
+
+.catalogs__left-item {
+  position: relative;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: normal;
+  color: $color-dark-tangerine;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-dark-tangerine;
+    top: calc(50% - 5px);
+    left: -20px;
+
+    @include vp-767 {
+      width: 6px;
+      height: 6px;
+      top: calc(50% - 2px);
+    }
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+  }
+}
+
+.catalogs__right-item {
+  position: relative;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: normal;
+  color: $color-lavender-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-lavender-blue;
+    top: calc(50% - 5px);
+    left: -20px;
+
+    @include vp-767 {
+      width: 6px;
+      height: 6px;
+      top: calc(50% - 2px);
+    }
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+  }
+}

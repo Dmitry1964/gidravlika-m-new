@@ -1,0 +1,130 @@
+.banner {
+  background-image: url("../img/content/banner-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0 77px 0;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/content/banner-back@2x.png");
+  }
+
+  @include vp-1023 {
+    padding: 50px 0 30px;
+  }
+
+  @include vp-767 {
+    background-image: url("../img/content/banner-back-mobile.png");
+    // height: 300px;
+    padding: 0;
+
+    @media (min-resolution: $retina-dpi) {
+      background-image: url("../img/content/banner-back-mobile@2x.png");
+    }
+  }
+}
+
+.banner__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1360px;
+  width: 100%;
+  padding: 0 50px;
+
+  @include vp-1279 {
+    padding: 15px 25px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.banner__chetra {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 50%;
+
+  @include vp-1023 {
+    gap: 40px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+.banner__chetra-logo {
+  @include vp-1023 {
+    width: 250px;
+  }
+
+  @include vp-767 {
+    width: 150px;
+  }
+}
+
+.banner__vipo {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 50%;
+
+  @include vp-1023 {
+    gap: 40px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    gap: 20px;
+    // align-items: flex-end;
+  }
+}
+
+.banner__vipo-logo {
+  margin-left: 50px;
+
+  @include vp-1023 {
+    width: 150px;
+  }
+
+  @include vp-767 {
+    width: 100px;
+    align-self: flex-end;
+  }
+}
+
+.banner__chetra-swiper {
+  width: 440px;
+  height: 288px;
+
+  @include vp-1023 {
+    width: 300px;
+    height: 180px;
+  }
+
+  @include vp-767 {
+    width: 200px;
+    height: 119px;
+    transform: translateX(-30px);
+  }
+}
+
+.banner__vipo-swiper {
+  width: 480px;
+  height: 250px;
+
+  @include vp-1023 {
+    width: 320px;
+    height: 170px;
+  }
+
+  @include vp-767 {
+    width: 200px;
+    height: 104px;
+    transform: translateX(30px);
+  }
+}
