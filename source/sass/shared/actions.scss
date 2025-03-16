@@ -5,6 +5,10 @@
   padding: 10px 0 10px 100px;
   margin: 0;
   background-color: $color-varden;
+
+  @include vp-1279 {
+    padding-left: 50px;
+  }
 }
 
 .actions__item {
