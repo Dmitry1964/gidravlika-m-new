@@ -1,0 +1,31 @@
+// .action-menu {
+//   // height: 50px;
+//   // background-color: $color-mardi-gras;
+// }
+
+.action-menu__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.action-menu__item {
+  display: flex;
+  justify-content: center;
+
+  &.active-link {
+    background-color: $color-varden;
+    transition: backgroun-color 0.35s ease;
+
+    & .action-menu__link {
+      color: $color-mardi-gras;
+    }
+  }
+}
+
+.action-menu__link {
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-default-white;
+  padding: 6px 0;
+  transition: color 0.5s ease;
+}

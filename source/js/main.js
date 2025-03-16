@@ -9,6 +9,7 @@ import './modules/kmu-slider';
 import './modules/breadcrumbs';
 import './modules/mksm-slider';
 import {initOffer} from './modules/modals/offer';
+import { initChetraAction } from './modules/chatra-action';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initOffer();
+
   // Modules
   // ---------------------------------
 
@@ -27,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
+    initChetraAction();
   });
 });
 
