@@ -46,12 +46,9 @@
 @import "blocks/catalogs";
 @import "blocks/offer";
 @import "blocks/offer-banner";
-
-// shared
-
-@import 'shared/action-menu.scss';
-@import 'shared/chetra-action.scss';
-@import 'shared/actions.scss';
+@import 'blocks/action-menu';
+@import 'blocks/chetra-action';
+@import 'blocks/actions';
 
 // ---------------------------------
 

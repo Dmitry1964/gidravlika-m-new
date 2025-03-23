@@ -1,8 +1,3 @@
-// .action-menu {
-//   // height: 50px;
-//   // background-color: $color-mardi-gras;
-// }
-
 .action-menu__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -31,4 +26,8 @@
   color: $color-default-white;
   padding: 6px 0;
   transition: color 0.5s ease;
+
+  @include  vp-1023 {
+    font-size: 14px;
+  }
 }

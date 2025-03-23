@@ -2,4 +2,9 @@
   background-color: $color-mardi-gras;
   padding-bottom: 30px;
   padding-top: 30px;
+
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
