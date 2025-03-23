@@ -1,3 +1,11 @@
+.action-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
 .action-mobile__img {
   display: flex;
   justify-content: center;
