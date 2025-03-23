@@ -4,11 +4,21 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .action-menu__item {
   display: flex;
   justify-content: center;
+  background-color: $color-palatine-purple;
+  border-right: 1px solid $color-varden;
+
+  &:last-child {
+    border-right: none;
+  }
 
   &.active-link {
     background-color: $color-varden;
