@@ -10,6 +10,7 @@ import './modules/breadcrumbs';
 import './modules/mksm-slider';
 // import {initOffer} from './modules/modals/offer';
 import {initChetraAction} from './modules/chatra-action';
+import {initActionMobile} from './modules/chetra-action-mobile';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCustomSelect();
     initFormValidate();
     initChetraAction();
+    initActionMobile();
   });
 });
 

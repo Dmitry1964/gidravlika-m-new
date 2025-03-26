@@ -9,8 +9,11 @@ const ICON_ANCHOR_SIZIES = [26, 52];
 
 const map = L.map('map', {
   scrollWheelZoom: false,
+  zoomControl: {
+    position: 'topright',
+  },
 }
-).setView([48.822733, 44.609915], 16);
+).setView([48.822733, 44.609915], 15);
 
 L.tileLayer(MAP_ADDRESS, {
   mapAttribution,

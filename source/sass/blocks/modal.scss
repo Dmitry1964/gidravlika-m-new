@@ -4,7 +4,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10000;
 
   display: flex;
   flex-direction: column;
@@ -80,9 +80,32 @@
     height: 40px;
     padding: 0;
 
-    background: $color-transparent;
+    background-color: transparent;
     border: none;
     cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: $color-neon-carrot;
+      top: calc(50% - 1px);
+      left: calc(50% - 15px);
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: $color-neon-carrot;
+      top: calc(50% - 1px);
+      left: calc(50% - 15px);
+      transform: rotate(-45deg);
+    }
+
   }
 
   &--responsive {
@@ -116,4 +139,13 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__description {
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-mardi-gras;
+
+  display: inline-block;
+  width: 90%;
 }
