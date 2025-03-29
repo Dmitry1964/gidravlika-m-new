@@ -84,5 +84,5 @@ const initChetraAction = () => {
 };
 
 export {
-  initChetraAction
+  initChetraAction, modal
 };
