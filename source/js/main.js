@@ -11,6 +11,7 @@ import './modules/mksm-slider';
 // import {initOffer} from './modules/modals/offer';
 import {initChetraAction} from './modules/chatra-action';
 import {initActionMobile} from './modules/chetra-action-mobile';
+import {initAnimationPriceDown} from './modules/animation-price-down';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initFormValidate();
     initChetraAction();
     initActionMobile();
+    initAnimationPriceDown();
   });
 });
 

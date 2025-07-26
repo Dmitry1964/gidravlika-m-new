@@ -161,3 +161,13 @@
     font-size: 20px;
   }
 }
+
+// Добавляем для экскаватора информацию
+
+.catalogs__left-item:last-child::after {
+  content: '*';
+  position: absolute;
+  top: 0;
+  right: -15px;
+  color: $color-dark-tangerine;
+}
