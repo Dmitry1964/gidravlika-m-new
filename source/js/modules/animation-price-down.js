@@ -33,7 +33,7 @@ const initAnimationPriceDown = () => {
   tl.to('#rec5', {scaleY: 0.4, y: TR5, duration: 0.35, ease: 'back.out(1.7)'});
   tl.to('#rec6', {scaleY: 0.25, y: TR6, duration: 0.35, ease: 'back.out(1.7)'});
   tl.to('#arrow', {opacity: 1, scale: 1, duration: 0.25, ease: 'back.out(1.7)'});
-  tl.to('#content', {opacity: 1, x: 0, duration: 0.5, ease: 'back.out(1.7)'})
+  tl.to('#content', {opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.7)'})
 
 
 
