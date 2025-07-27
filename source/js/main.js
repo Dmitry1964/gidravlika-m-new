@@ -12,6 +12,7 @@ import './modules/mksm-slider';
 import {initChetraAction} from './modules/chatra-action';
 import {initActionMobile} from './modules/chetra-action-mobile';
 import {initAnimationPriceDown} from './modules/animation-price-down';
+import { preceDownModal } from './modules/price-down-modal';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -34,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initChetraAction();
     initActionMobile();
     initAnimationPriceDown();
+    preceDownModal();
   });
 });
 
